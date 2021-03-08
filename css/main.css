@@ -1,0 +1,183 @@
+/*--------variables--------*/
+/*--------mixing--------*/
+/*-------------HEADER-------------*/
+.logos {
+  text-align: center;
+  font-family: "Roboto", "Open Sans", sans-serif;
+  margin: auto;
+  padding: auto;
+}
+
+.logos #logo {
+  font-weight: bold;
+  font-size: 3.2em;
+}
+
+.logos #eslogan {
+  font-size: 1em;
+  color: grey;
+}
+
+table {
+  margin: auto;
+  padding: auto;
+}
+
+table tr {
+  display: inline-table;
+  margin-left: 7px;
+  margin-top: 5%;
+  color: grey;
+}
+
+table tr th {
+  border-right: 1px dashed grey;
+  padding-bottom: auto;
+  padding-right: 2%;
+}
+
+table tr td {
+  padding-left: 2%;
+  padding-top: 5%;
+}
+
+.social {
+  width: 180px;
+  height: auto;
+  margin: 20px auto;
+  padding: auto;
+}
+
+.social a {
+  margin-right: 2%;
+}
+
+.social a img {
+  width: 18%;
+  height: 18%;
+}
+
+/*----------FIRST SECTION----------*/
+.first {
+  margin-top: 10%;
+}
+
+.first .titles {
+  font-family: "Roboto", "Open Sans", sans-serif;
+  font-weight: bold;
+  padding-bottom: 1%;
+  border-bottom: 1px dashed black;
+  margin-bottom: 25px;
+}
+
+.first .parra {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.first .especialities {
+  width: 90%;
+  margin: auto;
+}
+
+.first .especialities a {
+  display: inline-block;
+  position: relative;
+  width: 30%;
+  margin-left: 50px;
+}
+
+.first .especialities a img {
+  width: 99%;
+}
+
+.first .especialities a h4 {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.first .especialities .img-z1 {
+  z-index: 1;
+  bottom: 10px;
+  left: 20px;
+  top: 0px;
+}
+
+.first .especialities .img-z3 {
+  z-index: 1;
+  bottom: 10px;
+  right: 20px;
+  top: 0px;
+}
+
+/*----------JUMBOTRON----------*/
+.jumbotron {
+  overflow-x: hidden;
+}
+
+.jumbotron .education {
+  margin-left: 15px;
+}
+
+.jumbotron .education .titles {
+  font-family: "Roboto", "Open Sans", sans-serif;
+  font-weight: bold;
+  padding-bottom: 1%;
+  border-bottom: 1px dashed black;
+  margin-bottom: 25px;
+}
+
+.jumbotron .slider-wrapper {
+  width: 95%;
+  margin-left: 15px;
+}
+
+/*----------SECOND SECTION----------*/
+#experience .titles {
+  font-family: "Roboto", "Open Sans", sans-serif;
+  font-weight: bold;
+  padding-bottom: 3px;
+  border-bottom: 1px dashed black;
+  margin-bottom: 25px;
+}
+
+#experience ul .inline {
+  display: inline-block;
+}
+
+#experience ul li {
+  margin-left: 28px;
+}
+
+#experience ul li h1 {
+  font-size: 6em;
+}
+
+#experience ul li p {
+  padding-top: 30px;
+  margin-left: 5px;
+}
+
+#portfolio .titles {
+  font-family: "Roboto", "Open Sans", sans-serif;
+  font-weight: bold;
+  padding-bottom: 3px;
+  border-bottom: 1px dashed black;
+  margin-bottom: 25px;
+}
+
+#portfolio .port {
+  padding: 20px;
+}
+
+#portfolio .port a {
+  margin: 15px;
+  display: inline-block;
+}
+
+#portfolio .port a img {
+  width: 64px;
+  height: 64px;
+}
+/*# sourceMappingURL=main.css.map */
