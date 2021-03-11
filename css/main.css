@@ -1,65 +1,45 @@
 /*--------variables--------*/
 /*--------mixing--------*/
 /*-------------HEADER-------------*/
+header {
+  background-color: #000000e3;
+  z-index: 0;
+}
+
 .logos {
   text-align: center;
   font-family: "Roboto", "Open Sans", sans-serif;
-  margin: auto;
   padding: auto;
 }
 
 .logos #logo {
+  margin-top: 5px;
+  color: #e9e8e8f2;
   font-weight: bold;
-  font-size: 3.2em;
+  font-size: 3em;
 }
 
 .logos #eslogan {
+  margin-top: 5px;
   font-size: 1em;
-  color: grey;
+  color: #e9e8e8f2;
 }
 
-table {
-  margin: auto;
-  padding: auto;
+nav ul {
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  background-color: #000000e3;
+  position: relative;
 }
 
-table tr {
-  display: inline-table;
-  margin-left: 7px;
-  margin-top: 5%;
-  color: grey;
-}
-
-table tr th {
-  border-right: 1px dashed grey;
-  padding-bottom: auto;
-  padding-right: 2%;
-}
-
-table tr td {
-  padding-left: 2%;
-  padding-top: 5%;
-}
-
-.social {
-  width: 180px;
-  height: auto;
-  margin: 20px auto;
-  padding: auto;
-  text-align: center;
-}
-
-.social a {
-  display: inline-block;
-  padding: auto;
-}
 
 /*----------FIRST SECTION----------*/
-.first {
-  margin-top: 10%;
+.especialidad {
+  background-color: #000000;
 }
 
-.first .titles {
+.especialidad .titles {
   font-family: "Roboto", "Open Sans", sans-serif;
   font-weight: bold;
   padding-bottom: 1%;
@@ -67,49 +47,58 @@ table tr td {
   margin-bottom: 25px;
 }
 
-.first .parra {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 20px;
-  text-align: center;
-}
-
-.first .especialities {
+.especialidad .especialities {
   width: 90%;
   margin: auto;
 }
 
-.first .especialities a {
+.especialidad .especialities a {
   display: inline-block;
   position: relative;
   width: 30%;
   margin-left: 50px;
 }
 
-.first .especialities a img {
+.especialidad .especialities a img {
   width: 99%;
 }
 
-.first .especialities a h4 {
+.especialidad .especialities a h4 {
   font-size: 0.8em;
   text-align: center;
 }
 
-.first .especialities .img-z1 {
+.especialidad .especialities .img-z1 {
   z-index: 1;
   bottom: 10px;
   left: 20px;
   top: 0px;
 }
 
-.first .especialities .img-z3 {
+.especialidad .especialities .img-z3 {
   z-index: 1;
   bottom: 10px;
   right: 20px;
   top: 0px;
 }
 
+.personal {
+  background-color: #000000;
+}
+
+.personal .first {
+  margin-top: 10%;
+}
+
+.personal .first .parra {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
 /*----------JUMBOTRON----------*/
 .jumbotron {
+  background-color: #e9e8e8f2;
   overflow-x: hidden;
 }
 

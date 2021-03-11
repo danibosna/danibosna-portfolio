@@ -1,44 +1,36 @@
 /*-------------HEADER-------------*/
-.logos 
-	text-align: center
-	font-family: $font
-	margin: auto
-	padding: auto
-	#logo 
-		font: 
-			weight: bold
-			size: 3.2em
-	#eslogan 
-		font-size: 1em
-		color: grey
-
-table 
-	margin: auto
-	padding: auto
-	tr 
-		display: inline-table
-		margin: 
-			left: 7px
-			top: 5%
-		color: grey
-		th 
-			border-right: 1px dashed grey
-			padding: 
-				bottom: auto
-				right: 2%
-		td
-			padding :
-				left: 2%
-				top: 5%
-
-.social 
-	width: 180px
-	height: auto
-	margin: 20px auto
-	padding: auto
-	text-align: center
-	a 
-		display: inline-block
+header
+	background-color: #000000e3
+	z-index: 0
+	.logos 
+		text-align: center
+		font-family: $font
 		padding: auto
-		
-				
+		#logo 
+			margin-top: 5px
+			color: #e9e8e8f2
+			font: 
+				weight: bold
+				size: 3em
+		#eslogan 
+			margin-top: 5px
+			font-size: 1em
+			color: #e9e8e8f2
+
+	menu
+		nav 
+			ul
+				display: table
+				overflow: hidden
+				width: 100%
+				background-color: #000000e3
+				position: relative
+				list-style: none
+				text-decoration: none
+				li
+					float: left
+					a
+						color: #fff
+						padding: 10px
+						display: block
+						text-decoration: none
