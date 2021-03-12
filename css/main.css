@@ -6,33 +6,56 @@ header {
   z-index: 0;
 }
 
-.logos {
+header .logos {
   text-align: center;
   font-family: "Roboto", "Open Sans", sans-serif;
   padding: auto;
 }
 
-.logos #logo {
+header .logos #logo {
   margin-top: 5px;
   color: #e9e8e8f2;
   font-weight: bold;
   font-size: 3em;
 }
 
-.logos #eslogan {
+header .logos #eslogan {
   margin-top: 5px;
   font-size: 1em;
   color: #e9e8e8f2;
 }
 
-nav ul {
-  display: table;
+header nav ul {
   overflow: hidden;
+  display: table;
   width: 100%;
   background-color: #000000e3;
   position: relative;
+  list-style: none;
+  text-decoration: none;
 }
 
+header nav ul li {
+  float: left;
+  display: table-cell;
+}
+
+header nav ul li ul {
+  display: none;
+}
+
+header nav ul li a {
+  color: #fff;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+}
+
+header nav ul li a:hover {
+  background-color: #000000b8;
+}
 
 /*----------FIRST SECTION----------*/
 .especialidad {
@@ -102,16 +125,16 @@ nav ul {
   overflow-x: hidden;
 }
 
-.jumbotron .education {
-  margin-left: 15px;
-}
-
-.jumbotron .education .titles {
+.jumbotron .titles {
   font-family: "Roboto", "Open Sans", sans-serif;
   font-weight: bold;
   padding-bottom: 1%;
   border-bottom: 1px dashed black;
   margin-bottom: 25px;
+}
+
+.jumbotron .education {
+  margin-left: 15px;
 }
 
 .jumbotron .slider-wrapper {

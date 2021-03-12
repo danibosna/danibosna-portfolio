@@ -2,6 +2,7 @@
 header
 	background-color: #000000e3
 	z-index: 0
+	width: 100%
 	.logos 
 		text-align: center
 		font-family: $font
@@ -16,21 +17,36 @@ header
 			margin-top: 5px
 			font-size: 1em
 			color: #e9e8e8f2
+	nav
+		background-color: #000000e3
+		z-index: 1000
+		ul
+			overflow: hidden
+			display: table
+			width: 100%
+			position: relative
+			list-style: none
+			text-decoration: none
+			li
+				float: left
+				display: table-cell
+				ul
+					display: none
+				a
+					color: #fff
+					padding: 10px
+					display: block
+					text-decoration: none
+					position: relative
+					text-align: center
+					&:hover
+						background-color: #000000b8
 
-	menu
-		nav 
-			ul
-				display: table
-				overflow: hidden
-				width: 100%
-				background-color: #000000e3
-				position: relative
-				list-style: none
-				text-decoration: none
-				li
-					float: left
-					a
-						color: #fff
-						padding: 10px
-						display: block
-						text-decoration: none
+@media screen and ( max-width:800px  ) {
+	nav
+		width: 25%
+		height: 50%
+		margin: 0
+		position: fixed
+}
+	
