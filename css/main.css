@@ -2,14 +2,15 @@
 /*--------mixing--------*/
 /*-------------HEADER-------------*/
 header {
-  background-color: #000000e3;
-  z-index: 0;
+  background-color: #000000;
+  width: 100%;
 }
 
 header .logos {
   text-align: center;
   font-family: "Roboto", "Open Sans", sans-serif;
   padding: auto;
+  float: left;
 }
 
 header .logos #logo {
@@ -25,26 +26,49 @@ header .logos #eslogan {
   color: #e9e8e8f2;
 }
 
-header nav ul {
-  overflow: hidden;
-  display: table;
-  width: 100%;
+header .botonMenu {
+  float: right;
+  z-index: 1100;
+}
+
+header nav {
   background-color: #000000e3;
+  z-index: 1000;
+  width: 75%;
+  height: 100%;
+  position: fixed;
+  display: block;
+}
+
+header nav .menu {
+  display: block;
+  width: 100%;
   position: relative;
   list-style: none;
   text-decoration: none;
+  z-index: 1100;
 }
 
-header nav ul li {
+header nav .menu li {
   float: left;
-  display: table-cell;
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  position: relative;
 }
 
-header nav ul li ul {
+header nav .menu li:hover .children {
+  display: block;
+  position: absolute;
+  z-index: 1000;
+  background-color: #000000e3;
+}
+
+header nav .menu li ul {
   display: none;
 }
 
-header nav ul li a {
+header nav .menu li a {
   color: #fff;
   padding: 10px;
   display: block;
@@ -53,8 +77,8 @@ header nav ul li a {
   text-align: center;
 }
 
-header nav ul li a:hover {
-  background-color: #000000b8;
+header nav .menu li a:hover {
+  background-color: #dbdadaf3;
 }
 
 /*----------FIRST SECTION----------*/

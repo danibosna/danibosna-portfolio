@@ -1,12 +1,12 @@
 /*-------------HEADER-------------*/
 header
-	background-color: #000000e3
-	z-index: 0
+	background-color: #000000
 	width: 100%
 	.logos 
 		text-align: center
 		font-family: $font
 		padding: auto
+		float: left
 		#logo 
 			margin-top: 5px
 			color: #e9e8e8f2
@@ -17,19 +17,36 @@ header
 			margin-top: 5px
 			font-size: 1em
 			color: #e9e8e8f2
+	.botonMenu
+		float: right
+		z-index: 1100
+		
 	nav
 		background-color: #000000e3
 		z-index: 1000
-		ul
-			overflow: hidden
-			display: table
+		width: 75%
+		height: 100%
+		position: fixed
+		display: block
+		.menu
+			display: block
 			width: 100%
 			position: relative
 			list-style: none
 			text-decoration: none
+			z-index: 1100
 			li
 				float: left
-				display: table-cell
+				display: block
+				border-bottom: 1px solid rgba(255,255,255,.5)
+				overflow: hidden
+				position: relative
+				&:hover
+					.children
+						display: block
+						position: absolute
+						z-index: 1000
+						background-color: #000000e3
 				ul
 					display: none
 				a
@@ -40,13 +57,5 @@ header
 					position: relative
 					text-align: center
 					&:hover
-						background-color: #000000b8
-
-@media screen and ( max-width:800px  ) {
-	nav
-		width: 25%
-		height: 50%
-		margin: 0
-		position: fixed
-}
+						background-color: #dbdadaf3
 	
