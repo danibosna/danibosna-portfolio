@@ -26,58 +26,49 @@ header .logos #eslogan {
   color: #e9e8e8f2;
 }
 
-header .botonMenu {
-  float: right;
+header menu .botonMenu {
   z-index: 1100;
+  float: right;
 }
 
-header nav {
+header menu .menu {
   background-color: #000000e3;
-  z-index: 1000;
-  width: 75%;
   height: 100%;
   position: fixed;
   display: block;
+  z-index: 1000;
 }
 
-header nav .menu {
-  display: block;
-  width: 100%;
-  position: relative;
+header menu .menu .lista {
   list-style: none;
   text-decoration: none;
-  z-index: 1100;
-}
-
-header nav .menu li {
-  float: left;
-  display: block;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
-header nav .menu li:hover .children {
+header menu .menu .lista li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+header menu .menu .lista li:hover .listachildren {
   display: block;
   position: absolute;
-  z-index: 1000;
   background-color: #000000e3;
 }
 
-header nav .menu li ul {
+header menu .menu .lista li ul {
   display: none;
 }
 
-header nav .menu li a {
+header menu .menu .lista li a {
   color: #fff;
   padding: 10px;
   display: block;
   text-decoration: none;
-  position: relative;
   text-align: center;
 }
 
-header nav .menu li a:hover {
+header menu .menu .lista li a:hover {
   background-color: #dbdadaf3;
 }
 
@@ -229,5 +220,9 @@ footer .img {
 
 footer .img img {
   width: 50%;
+}
+
+footer .chatBot {
+  z-index: 1100;
 }
 /*# sourceMappingURL=main.css.map */

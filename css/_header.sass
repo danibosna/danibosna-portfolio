@@ -17,45 +17,45 @@ header
 			margin-top: 5px
 			font-size: 1em
 			color: #e9e8e8f2
-	.botonMenu
-		float: right
-		z-index: 1100
-		
-	nav
-		background-color: #000000e3
-		z-index: 1000
-		width: 75%
-		height: 100%
-		position: fixed
-		display: block
-		.menu
-			display: block
-			width: 100%
-			position: relative
-			list-style: none
-			text-decoration: none
+	menu
+		.botonMenu
 			z-index: 1100
-			li
-				float: left
-				display: block
-				border-bottom: 1px solid rgba(255,255,255,.5)
-				overflow: hidden
-				position: relative
+			float: right
+			.btn-menu
 				&:hover
-					.children
-						display: block
-						position: absolute
-						z-index: 1000
-						background-color: #000000e3
-				ul
-					display: none
-				a
-					color: #fff
-					padding: 10px
-					display: block
-					text-decoration: none
-					position: relative
-					text-align: center
+					// .menu
+					// 	display: block
+					// 	float: right
+					// 	background-color: #000000e3
+					// 	width: 75%
+					// 	height: 100%
+					// 	position: fixed
+		.menu			
+			background-color: #000000e3
+			height: 100%
+			position: fixed	
+			display: block
+			z-index: 1000
+			.lista
+				list-style: none
+				text-decoration: none
+				position: relative
+				width: 100%	
+				li
+					border-bottom: 1px solid rgba(255,255,255,.5)
 					&:hover
-						background-color: #dbdadaf3
-	
+						.listachildren
+							display: block
+							position: absolute
+							background-color: #000000e3
+					ul
+						display: none
+					a
+						color: #fff
+						padding: 10px
+						display: block
+						text-decoration: none
+						text-align: center
+						&:hover
+							background-color: #dbdadaf3
+		
