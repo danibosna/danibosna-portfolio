@@ -26,28 +26,56 @@ header .logos #eslogan {
   color: #e9e8e8f2;
 }
 
-header menu .botonMenu {
-  z-index: 1100;
-  float: right;
+header .botonMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  z-index: 1000;
+  margin: 0 auto;
+}
+
+header menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #000000e3;
+  width: 25%;
+  height: 75%;
+  position: fixed;
+  z-index: 1000;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
 }
 
 header menu .menu {
-  background-color: #000000e3;
-  height: 100%;
-  position: fixed;
-  display: block;
-  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header menu .menu .lista {
   list-style: none;
   text-decoration: none;
-  position: relative;
-  width: 100%;
+  padding: 0;
 }
 
 header menu .menu .lista li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 1rem;
 }
 
 header menu .menu .lista li:hover .listachildren {
