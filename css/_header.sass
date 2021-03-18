@@ -17,25 +17,21 @@ header
 			margin-top: 5px
 			font-size: 1em
 			color: #e9e8e8f2
+#menu
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-end
 	.botonMenu
-		display: flex
-		margin-bottom: 1rem
-		justify-content: flex-end 
-		z-index: 1000
-		margin: 0 auto
+		z-index: 1100
 		.btn-menu
+			margin-top: 1.5rem
+			display: flex
+			justify-content: center
 			&:hover
 				menu
-				// display: flex
-				// background-color: #000000e3
-				// width: 50%
-				// height: 85%
-				// position: fixed
-				// z-index: 1000
+					
 	menu
-		// display: flex
-		// justify-content: flex-end
-		// display: none
+		//display: none
 		display: flex
 		background-color: #000000e3
 		width: 25%
@@ -44,18 +40,22 @@ header
 		z-index: 1000
 		flex-direction: column
 		justify-content: center
-		padding: 0 		
+		padding: 0 
 		.menu
 			display: flex
-			width: 100%
 			justify-content: center
 			.lista
+				display: flex
+				flex-direction: column
 				list-style: none
 				text-decoration: none
-				padding: 0
+				padding: 1rem
+				flex: 0 0 100%
+
 				li
 					border-bottom: 1px solid rgba(255,255,255,.5)
 					margin-bottom: 1rem
+
 					&:hover
 						.listachildren
 							display: block
@@ -71,4 +71,5 @@ header
 						text-align: center
 						&:hover
 							background-color: #dbdadaf3
+							
 		

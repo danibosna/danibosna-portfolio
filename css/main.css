@@ -26,19 +26,32 @@ header .logos #eslogan {
   color: #e9e8e8f2;
 }
 
-header .botonMenu {
+#menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  z-index: 1000;
-  margin: 0 auto;
 }
 
-header menu {
+#menu .botonMenu {
+  z-index: 1100;
+}
+
+#menu .botonMenu .btn-menu {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#menu menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,38 +70,47 @@ header menu {
   padding: 0;
 }
 
-header menu .menu {
+#menu menu .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-header menu .menu .lista {
+#menu menu .menu .lista {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   list-style: none;
   text-decoration: none;
-  padding: 0;
+  padding: 1rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
 }
 
-header menu .menu .lista li {
+#menu menu .menu .lista li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   margin-bottom: 1rem;
 }
 
-header menu .menu .lista li:hover .listachildren {
+#menu menu .menu .lista li:hover .listachildren {
   display: block;
   position: absolute;
   background-color: #000000e3;
 }
 
-header menu .menu .lista li ul {
+#menu menu .menu .lista li ul {
   display: none;
 }
 
-header menu .menu .lista li a {
+#menu menu .menu .lista li a {
   color: #fff;
   padding: 10px;
   display: block;
@@ -96,7 +118,7 @@ header menu .menu .lista li a {
   text-align: center;
 }
 
-header menu .menu .lista li a:hover {
+#menu menu .menu .lista li a:hover {
   background-color: #dbdadaf3;
 }
 
