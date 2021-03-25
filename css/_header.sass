@@ -2,66 +2,52 @@
 header
 	background-color: #000000
 	width: 100%
-	.logos 
+	.logos
+		display: flex 
+		flex-direction: column
 		text-align: center
 		font-family: $font
 		padding: auto
-		float: left
-		#logo 
-			margin-top: 5px
+		
+		#logo
+			justify-content: center
+			margin: 5px auto
 			color: #e9e8e8f2
 			font: 
 				weight: bold
 				size: 3em
 		#eslogan 
-			margin-top: 5px
+			justify-content: center
+			margin: 5px auto
 			font-size: 1em
 			color: #e9e8e8f2
 #menu
 	display: flex
-	flex-wrap: wrap
-	justify-content: flex-end
-	.botonMenu
-		z-index: 1100
-		.btn-menu
-			margin-top: 1.5rem
-			display: flex
-			justify-content: center
-			&:hover
-				menu
-					
-	menu
-		//display: none
+	justify-content: center 
+
+	// .btn-menu
+	// 	z-index: 1100
+	// 	margin-top: 1.5rem
+	// 	display: flex
+	// 	justify-content: center
+				
+	.lista
 		display: flex
-		background-color: #000000e3
-		width: 25%
-		height: 75%
-		position: fixed
-		z-index: 1000
 		flex-direction: column
-		justify-content: center
-		padding: 0 
-		.menu
-			display: flex
-			justify-content: center
-			.lista
-				display: flex
-				flex-direction: column
-				list-style: none
-				text-decoration: none
-				padding: 1rem
-				flex: 0 0 100%
+		list-style: none
+		text-decoration: none
+		padding: 1rem
+		flex: 0 0 100%
 
-				li
-					border-bottom: 1px solid rgba(255,255,255,.5)
-					margin-bottom: 1rem
-
-					&:hover
-						.listachildren
-							display: block
-							position: absolute
-							background-color: #000000e3
-					ul
+		li
+			border-bottom: 1px solid rgba(255,255,255,.5)
+			margin-bottom: 1rem
+			&:hover
+				.listachildren
+					display: block
+					position: absolute
+					background-color: #000000e3
+					li
 						display: none
 					a
 						color: #fff
