@@ -1,17 +1,20 @@
 /*-------------HEADER-------------*/
 body
-
+	box-sizing: border-box
+	margin: 0
 	header
 		background-color: #000000
-		width: 100%
-
+		.container
+			display: flex
+			flex-direction: column
+			justify-content: center
+			
 		.logos
 			display: flex 
 			flex-direction: column
 			text-align: center
 			font-family: $font
 			padding: auto
-			
 			#logo
 				justify-content: center
 				margin: 5px auto
@@ -24,6 +27,11 @@ body
 				margin: 5px auto
 				font-size: 1em
 				color: #e9e8e8f2
+	.screen
+    	max-width: 1000px
+    	margin: 0 auto
+    	padding: 0 1rem
+		
 
 							
 		
