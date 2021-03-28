@@ -24,7 +24,7 @@ body header .container {
           justify-content: center;
 }
 
-body header .logos {
+body header .container .logos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,7 +37,7 @@ body header .logos {
   padding: auto;
 }
 
-body header .logos #logo {
+body header .container .logos #logo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -47,13 +47,68 @@ body header .logos #logo {
   font-size: 3em;
 }
 
-body header .logos #eslogan {
+body header .container .logos #eslogan {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 5px auto;
   font-size: 1em;
   color: #e9e8e8f2;
+}
+
+body header .container menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2rem;
+}
+
+body header .container menu button {
+  background-color: MediumBlue;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body header .container menu .lista {
+  font-size: 1rem;
+  background-color: #020202d1;
+  z-index: 1000;
+}
+
+body header .container menu .lista ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 2rem;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+body header .container menu .lista ul li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 16%;
+          flex: 0 0 16%;
+  border: 1px solid #ffffff9f;
+  text-decoration: none;
+}
+
+body header .container menu .lista ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+body header .container menu .lista ul li .sub-mn {
+  display: none;
 }
 
 body .screen {

@@ -7,26 +7,62 @@ body
 		.container
 			display: flex
 			flex-direction: column
-			justify-content: center
+			justify-content: center	
 			
-		.logos
-			display: flex 
-			flex-direction: column
-			text-align: center
-			font-family: $font
-			padding: auto
-			#logo
-				justify-content: center
-				margin: 5px auto
-				color: #e9e8e8f2
-				font: 
-					weight: bold
-					size: 3em
-			#eslogan 
-				justify-content: center
-				margin: 5px auto
-				font-size: 1em
-				color: #e9e8e8f2
+			.logos
+				display: flex 
+				flex-direction: column
+				text-align: center
+				font-family: $font
+				padding: auto
+			
+				#logo
+					justify-content: center
+					margin: 5px auto
+					color: #e9e8e8f2
+					font: 
+						weight: bold
+						size: 3em
+				#eslogan 
+					justify-content: center
+					margin: 5px auto
+					font-size: 1em
+					color: #e9e8e8f2
+			menu
+				display: flex
+				flex-direction: column
+				padding: 0 2rem
+				
+				button
+					background-color: MediumBlue
+					align-self: center
+					
+				.lista
+					//display: none
+					font-size: 1rem
+					background-color: #020202d1
+					z-index: 1000
+					ul
+						display: flex
+						flex-wrap: wrap
+						justify-content: space-between
+						padding: 0 2rem
+						margin: 0 auto
+						text-decoration: none
+						li
+							flex: 0 0 16%
+							border: 1px solid #ffffff9f
+							text-decoration: none
+							a
+								color: #fff
+								text-decoration: none 
+							.sub-mn
+								display: none
+
+
+					
+
+
 	.screen
     	max-width: 1000px
     	margin: 0 auto
