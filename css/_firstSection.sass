@@ -1,37 +1,25 @@
 /*----------FIRST SECTION----------*/
-.especialidad
-	background-color: #000000
-	.titles 
-		+titles($font, bold, 1%, 1px dashed black, 25px)
-	.especialities 
-		width: 90%
-		margin: auto
-		a
-			display: inline-block
-			position: relative
-			width: 30%
-			margin-left: 50px
-			img 
-				width: 99%
-			h4 
-				font-size: 0.8em
-				text-align: center
-		.img-z1
-			z-index: 1
-			bottom: 10px
-			left: 20px
-			top: 0px
-		.img-z3
-			z-index: 1
-			bottom: 10px
-			right: 20px
-			top: 0px
-.personal
-	background-color: #000000
-	
-	.first 
-		margin-top: 10%
+.first
+	max-width: 1100px
+	margin: 0 auto
+	display: flex
+	justify-content: space-between	
+	.personal
+		flex: 0 0 45%
 		.parra
 			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
 			font-size: 20px
 			text-align: center
+	.especialidad
+		flex: 0 0 45%
+		.especialities 
+			display: flex
+			justify-content: space-around
+			a
+				img 
+					width: 99%
+				h4 
+					font-size: 0.8em
+					text-align: center
+	.titles 
+		+titles($font, bold, 1%, 1px dashed black, 25px)

@@ -1,12 +1,26 @@
 /*----------JUMBOTRON----------*/
 .jumbotron
 	background-color: #e9e8e8f2
-	overflow-x: hidden
+	display: flex
+	flex-direction: column
+	+tablet()
+		flex-direction: row
+		width: 100%
+	.slider-wrapper
+		display: flex
+		justify-content: center
+		flex: 0 0 65%
+		.nivoSlider
+			margin-top: 5.5rem
+			margin-left: 1rem
+	.education
+		+tablet()
+			padding-top: 5.5rem
+			padding: 5.5rem 0 0 1rem
+			flex: 0 0 25%
+			flex-wrap: wrap
 	.titles 
 		+titles($font, bold, 1%, 1px dashed black, 25px)
-	.education 
-		margin-left: 15px
 
-	.slider-wrapper
-		width: 95%
-		margin-left: 15px
+	
+		
