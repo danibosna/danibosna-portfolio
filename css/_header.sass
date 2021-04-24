@@ -1,70 +1,88 @@
 /*-------------HEADER-------------*/
-body
+html
 	box-sizing: border-box
-	margin: 0
+*,
+*:after,
+*:before 
+	box-sizing: inherit
+body
 	header
+		position: fixed
+		z-index: 100
+		width: 100%
 		.container
 			display: flex
 			flex-direction: column
-			position: fixed
-			z-index: 100
-			width: 100%
+			background-color: #000000
 			.logos
-				background-color: #000000
 				display: flex 
 				flex-direction: column
-				align-items: center
+				justify-content: center
 				font-family: $font
-				width: 100%
-				+tablet()
-					flex-direction: row
-					justify-content: space-around
 				.logo
 					display: flex
 					flex-direction: column
-					align-items: center
+					color: $colorPrimario
 					#logo
 						font: 3.5rem bold
-						color: $colorPrimario
-						align-self: center
 						margin: 0 auto 
-					#eslogan
-						align-self: center
-						color: $colorPrimario 
+					#eslogan 
 						font: 200
 						margin: 0 auto
-				button
-					background-color: SeaShell
-					align-self: center
-					padding: 0 auto	
-			.lista
-				// display: none
+			.btn-menu
+				background-color: #4356ff 
+				margin: 1rem 0
+				height: 3rem
+				width: 3rem
+				align-self: center
+				cursor: pointer
+				border: none
+				border-radius: 100%
+				transition: all .3s ease
+				+tablet()
+					&:hover
+						background-color: #002fc9
+			+tablet()
+				flex-direction: row
+				justify-content: space-between
+				padding: .5rem 2rem
+			
+
+		.lista
+			margin-top: -100%
+		.mostrar 
+			z-index: 99
+			display: flex
+			flex-direction: column
+			align-self: flex-end
+			font-size: 1rem
+			width: 25%
+			margin: 0 0 0 auto
+			padding: 0 1.5rem
+			background-color: #000000de
+			transition: all .5s ease
+			
+			ul
 				display: flex
 				flex-direction: column
-				align-self: flex-end
-				font-size: 1rem
-				margin: 0
-				padding: 0 1.5rem
-				background-color: #000000de
-				ul
-					display: flex
-					flex-direction: column
-					align-items: center
-					padding: 0
-					text-decoration: none
-					list-style: none
-					li
-						margin: 1rem 0 
-						a
-							display: flex
-							flex-direction: column
-							align-items: center
-							color: #fff
-							text-decoration: none 
-							border-bottom: 1px solid #ffffff9f
-						.sub-mn
-							display: none
-		
+				align-items: center
+				padding: 0
+				text-decoration: none
+				list-style: none
+				li
+					margin: 1rem 0 
+					a
+						display: flex
+						flex-direction: column
+						align-items: center
+						color: #fff
+						text-decoration: none
+						padding-bottom: .5rem 
+						border-bottom: 1px solid #ffffff9f
+						&:hover
+							color: #4d78ec
+					.sub-mn
+						display: none
 
 							
 		
