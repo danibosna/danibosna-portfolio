@@ -20,17 +20,17 @@ body header {
 }
 
 body header .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% auto 10%;
+      grid-template-columns: 10% auto 10%;
   background-color: #000000;
 }
 
 body header .container .logos {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,26 +53,30 @@ body header .container .logos .logo {
       -ms-flex-direction: column;
           flex-direction: column;
   color: AliceBlue;
+  margin-bottom: .5rem;
 }
 
 body header .container .logos .logo #logo {
-  font: 3.5rem bold;
+  font: 2rem bold;
   margin: 0 auto;
 }
 
 body header .container .logos .logo #eslogan {
-  font: 200;
   margin: 0 auto;
 }
 
 body header .container .btn-menu {
-  background-color: #4356ff;
-  margin: 1rem 0;
-  height: 3rem;
-  width: 3rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  background-color: #4356ff;
+  height: 2.5rem;
+  width: 2.5rem;
   cursor: pointer;
   border: none;
   border-radius: 100%;
@@ -83,19 +87,6 @@ body header .container .btn-menu {
 @media only screen and (min-width: 768px) {
   body header .container .btn-menu:hover {
     background-color: #002fc9;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  body header .container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: .5rem 2rem;
   }
 }
 
@@ -238,37 +229,63 @@ body header .mostrar ul li .sub-mn {
 
 /*----------JUMBOTRON----------*/
 .jumbotron {
-  background-color: #e9e8e8f2;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  grid-gap: 1rem;
-  padding: 10.5rem 0 1rem 0;
-}
-
-@media only screen and (min-width: 768px) {
-  .jumbotron {
-    -ms-grid-rows: unset;
-        grid-template-rows: unset;
-    -ms-grid-columns: 2fr 1fr;
-        grid-template-columns: 2fr 1fr;
-    padding: 6.5rem 0 1rem 0;
-    grid-gap: 1rem;
-  }
-}
-
-.jumbotron .slider-wrapper {
+  background-color: #1a1a1af2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  height: 100vh;
+}
+
+.jumbotron .slider-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 2rem;
 }
 
 .jumbotron .slider-wrapper .nivoSlider {
-  margin: 0.5rem;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.jumbotron .slider-wrapper .nivoSlider img {
+  height: 100%;
+}
+
+.jumbotron .education {
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  position: relative;
+  padding: .5rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  bottom: 1rem;
+  height: 17%;
+}
+
+@media only screen and (min-width: 480px) {
+  .jumbotron .education {
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .jumbotron .education {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .jumbotron .education {
+    width: 20%;
+  }
+}
+
+.jumbotron .education ul {
+  margin: 0;
 }
 
 .jumbotron .titles {
@@ -277,6 +294,7 @@ body header .mostrar ul li .sub-mn {
   padding-bottom: 1%;
   border-bottom: 1px dashed black;
   margin-bottom: 25px;
+  margin: 0;
 }
 
 /*----------SECOND SECTION----------*/

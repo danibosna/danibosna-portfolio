@@ -11,10 +11,11 @@ body
 		z-index: 100
 		width: 100%
 		.container
-			display: flex
-			flex-direction: column
+			display: grid
+			grid-template-columns: 10% auto 10%
 			background-color: #000000
 			.logos
+				grid-column: 2/3
 				display: flex 
 				flex-direction: column
 				justify-content: center
@@ -23,18 +24,19 @@ body
 					display: flex
 					flex-direction: column
 					color: $colorPrimario
+					margin-bottom: .5rem
 					#logo
-						font: 3.5rem bold
+						font: 2rem bold
 						margin: 0 auto 
 					#eslogan 
-						font: 200
 						margin: 0 auto
 			.btn-menu
-				background-color: #4356ff 
-				margin: 1rem 0
-				height: 3rem
-				width: 3rem
 				align-self: center
+				justify-self: center
+				grid-column: 3/4
+				background-color: #4356ff 
+				height: 2.5rem
+				width: 2.5rem
 				cursor: pointer
 				border: none
 				border-radius: 100%
@@ -42,14 +44,9 @@ body
 				+tablet()
 					&:hover
 						background-color: #002fc9
-			+tablet()
-				flex-direction: row
-				justify-content: space-between
-				padding: .5rem 2rem
-			
-
 		.lista
 			margin-top: -100%
+
 		.mostrar 
 			z-index: 99
 			display: flex
@@ -61,7 +58,6 @@ body
 			padding: 0 1.5rem
 			background-color: #000000de
 			transition: all .5s ease
-			
 			ul
 				display: flex
 				flex-direction: column
