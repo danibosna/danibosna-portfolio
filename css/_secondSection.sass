@@ -1,5 +1,8 @@
 /*----------SECOND SECTION----------*/
-#experience 
+.second
+	display: flex
+	flex-direction: column
+	#experience 
 	.titles 
 		+titles($font, bold, 3px, 1px dashed black, 25px)
 	ul 
@@ -12,7 +15,7 @@
 			p 
 				padding-top: 30px
 				margin-left: 5px
-#portfolio
+	#portfolio
 	.titles 
 		+titles($font, bold, 3px, 1px dashed black, 25px)
 	.port 
@@ -23,3 +26,9 @@
 			img 
 				width: 64px
 				height: 64px
+	.personal
+		flex: 0 0 45%
+		.parra
+			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+			font-size: 20px
+			text-align: center

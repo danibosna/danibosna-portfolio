@@ -184,18 +184,6 @@ body header .mostrar ul li .sub-mn {
   }
 }
 
-.first .personal {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 45%;
-          flex: 0 0 45%;
-}
-
-.first .personal .parra {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 20px;
-  text-align: center;
-}
-
 .first .especialidad {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 45%;
@@ -298,7 +286,17 @@ body header .mostrar ul li .sub-mn {
 }
 
 /*----------SECOND SECTION----------*/
-#experience .titles {
+.second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.second .titles {
   font-family: "Roboto", "Open Sans", sans-serif;
   font-weight: bold;
   padding-bottom: 3px;
@@ -306,24 +304,24 @@ body header .mostrar ul li .sub-mn {
   margin-bottom: 25px;
 }
 
-#experience ul .inline {
+.second ul .inline {
   display: inline-block;
 }
 
-#experience ul li {
+.second ul li {
   margin-left: 28px;
 }
 
-#experience ul li h1 {
+.second ul li h1 {
   font-size: 6em;
 }
 
-#experience ul li p {
+.second ul li p {
   padding-top: 30px;
   margin-left: 5px;
 }
 
-#portfolio .titles {
+.second .titles {
   font-family: "Roboto", "Open Sans", sans-serif;
   font-weight: bold;
   padding-bottom: 3px;
@@ -331,18 +329,30 @@ body header .mostrar ul li .sub-mn {
   margin-bottom: 25px;
 }
 
-#portfolio .port {
+.second .port {
   padding: 20px;
 }
 
-#portfolio .port a {
+.second .port a {
   margin: 15px;
   display: inline-block;
 }
 
-#portfolio .port a img {
+.second .port a img {
   width: 64px;
   height: 64px;
+}
+
+.second .personal {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+}
+
+.second .personal .parra {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 20px;
+  text-align: center;
 }
 
 /*------Footer--------*/
