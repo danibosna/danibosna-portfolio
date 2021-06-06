@@ -22,8 +22,8 @@ body header {
 body header .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10% auto 10%;
-      grid-template-columns: 10% auto 10%;
+  -ms-grid-columns: 20% auto 20%;
+      grid-template-columns: 20% auto 20%;
   background-color: #000000;
 }
 
@@ -229,7 +229,7 @@ body header .mostrar ul li .sub-mn {
 
 /*----------JUMBOTRON----------*/
 .jumbotron {
-  background-color: #1a1a1af2;
+  background-color: #970a0af2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,7 +239,6 @@ body header .mostrar ul li .sub-mn {
 .jumbotron .slider-wrapper {
   position: absolute;
   width: 100%;
-  top: 2rem;
 }
 
 .jumbotron .slider-wrapper .nivoSlider {
@@ -266,7 +265,7 @@ body header .mostrar ul li .sub-mn {
   height: 17%;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 350px) {
   .jumbotron .education {
     width: 75%;
   }
