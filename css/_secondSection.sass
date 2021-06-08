@@ -25,9 +25,66 @@
 			img 
 				width: 64px
 				height: 64px
-	.personal
-		flex: 0 0 45%
-		.parra
-			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
-			font-size: 20px
+	.modal-container
+		visibility: hidden
+		opacity: 0
+		position: fixed
+		z-index: 1000
+		width: 100%
+		height: 100vh
+		top: 0
+		left: 0
+		background: rgba(0, 0, 0, 0.5)
+		display: flex
+		justify-content: center
+		align-items: center
+		.modal
+			background-color: rgba(0, 0, 0, 0.8)
 			text-align: center
+			color: #e2dddd
+			padding: 0
+			display: flex
+			flex-wrap: nowrap
+			flex-direction: column
+			justify-content: space-between
+			position: relative
+			transition: transform 0.8s
+			transform: translateY(0%)
+			border-radius: 10px
+			width: 100%
+			height: 80%
+			top: 1rem
+			+tablet()
+				width: 40%
+			.close
+				height: 2rem
+				width: 2rem
+				background: #004206
+				align-self: flex-end
+				border: none
+				border-radius: 50px
+				cursor: pointer
+				line-height: 25px
+				position: absolute
+				top: .5rem
+				right: .5rem
+
+			img
+				margin: 1.5rem 0
+				max-width: 30%
+				height: 30%
+				align-self: center
+			.info
+				padding: 3rem
+				overflow-y: scroll
+				+tablet()
+					overflow: hidden
+				.titles
+					+titles($font, bold, 3px, 1px dashed #e2dddd, 25px)
+				p
+					font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+					font-size: 20px
+					text-align: center
+					
+		.modal-close
+			transform: translateY(-200%)
