@@ -1,6 +1,6 @@
 //variables
 const btnMn = document.querySelector('.btn-menu');
-const menu = document.querySelector('.lista');
+const menu = document.querySelector('#menu');
 const cerrarModal = document.querySelector('.close');
 const abrirModal = document.querySelector('.cta');
 const modal = document.querySelector('.modal');
@@ -12,7 +12,6 @@ function eventListeners() {
     abrirModal.addEventListener('click', mostrarModal);
     cerrarModal.addEventListener('click', ocultarModal);
     window.addEventListener('click', (e) => {
-        console.log(e.target);
         if(e.target == modalCont) {
             modal.classList.toggle("modal-close");
             setTimeout(() => {
@@ -33,14 +32,17 @@ $(window).on('load', function() {
 //mostrar y ocultar menu
 function mostrarMenu(e) {
     e.preventDefault();
-    menu.classList.toggle("lista-close");
-    
+
+    menu.classList.toggle('lista-close');
+
     if(menu.classList.contains('lista-close')) {
         setTimeout(() => {
+            menu.classList.remove('lista');
             menu.style.opacity = "0";
             menu.style.visibility = "hidden";
         },900);
     } else {
+        menu.classList.add('lista');
         menu.style.opacity = "1";
         menu.style.visibility = "visible";
     }
@@ -52,10 +54,8 @@ function mostrarModal(e) {
     modalCont.style.opacity = "1";
     modalCont.style.visibility = "visible";
     modal.classList.toggle("modal-close");
-
 }
 function ocultarModal() {
-    
     modal.classList.toggle("modal-close");
     setTimeout(() => {
         modalCont.style.opacity = "0";
