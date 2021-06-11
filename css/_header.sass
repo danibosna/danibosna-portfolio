@@ -45,9 +45,10 @@ body
 				cursor: pointer
 				border: none
 				border-radius: 50%
-				transition: all .3s ease
 				+tablet()
 					&:hover
+						transition: all .8s 
+						transform: rotate(360deg)
 						background-color: #4b9b639d
 		.lista 
 			padding: 0
@@ -55,13 +56,14 @@ body
 			font-size: 1rem
 			width: 30%
 			background-color: #000000de
-			transition: transform 0.8s
-			transform: translateY(0%)
+			transition: all .5s
+			transform: translateY(-3%)
 			display: flex
 			flex-direction: column
 			position: fixed
 			right: 0
 			z-index: -1
+			border-radius: 5px
 			ul
 				display: flex
 				flex-direction: column

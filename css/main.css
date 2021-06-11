@@ -85,12 +85,14 @@ body header .container .btn-menu {
   cursor: pointer;
   border: none;
   border-radius: 50%;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
 }
 
 @media only screen and (min-width: 768px) {
   body header .container .btn-menu:hover {
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
     background-color: #4b9b639d;
   }
 }
@@ -101,12 +103,10 @@ body header .lista {
   font-size: 1rem;
   width: 30%;
   background-color: #000000de;
-  -webkit-transition: -webkit-transform 0.8s;
-  transition: -webkit-transform 0.8s;
-  transition: transform 0.8s;
-  transition: transform 0.8s, -webkit-transform 0.8s;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-transform: translateY(-3%);
+          transform: translateY(-3%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,6 +117,7 @@ body header .lista {
   position: fixed;
   right: 0;
   z-index: -1;
+  border-radius: 5px;
 }
 
 body header .lista ul {
@@ -429,6 +430,7 @@ body header .lista-close {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  border-radius: 5px;
 }
 
 .second .modal-container .modal .info {
