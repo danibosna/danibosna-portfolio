@@ -25,21 +25,21 @@
 				</div>
 			</div>
 
-			<button type="button" class="btn-menu"></button>
+			<button type="button" class="btn-menu" id="button"></button>
 		</div>
 		<menu id="menu" class="lista lista-close">
 			<ul>
-				<li ><a href="#" class="cta"><i class="far fa-id-badge"></i>Me</a></li>
-				<li><a href="#"> <i class="fas fa-folder-open"></i>Portafolio</a>
+				<li ><a href="#" id="cta"><i class="far fa-id-badge"></i>Me</a></li>
+				<li><a href="#" id="port"> <i class="fas fa-folder-open"></i>Portafolio</a>
 					<ul class="sub-mn">
 						<li><a href="#">BoskiCookBook</a></li>
 						<li><a href="#">SimonnsTattoo</a></li>
 					</ul>
 				</li>
-				<li ><a href="#"><i class="fas fa-chart-bar"></i>Especialities</a></li>
-				<li ><a href="#"><i class="fas fa-code"></i>Experience</a></li>
-				<li ><a href="#"><i class="fas fa-braille"></i>Skills</a></li>
-				<li ><a href="#"><i class="far fa-comments"></i>Conversemos</a></li>
+				<li ><a href="#" id="especialidad"><i class="fas fa-chart-bar"></i>Especialities</a></li>
+				<li ><a href="#" id="experiencia"><i class="fas fa-code"></i>Experience</a></li>
+				<li ><a href="#" id="skill"><i class="fas fa-braille"></i>Skills</a></li>
+				<li ><a href="#" id="conversacion"><i class="far fa-comments"></i>Conversemos</a></li>
 			</ul>
 		</menu>
 	</header>	
@@ -92,9 +92,9 @@
 				<a href="#" target="_blank" class="animated growIn" data-id="3"><img src="img/javascript.png"></a>
 			</div>
 		</div>
-		<div class="modal-container">
-			<div class="personal modal modal-close">
-				<button class="close">X</button>
+		<div id="modal-cont" class="modal-container">
+			<div id="modal" class="personal modal modal-close">
+				<button id="close" class="close">X</button>
 				<img src="img/yo.jpg" alt="">
 				<div class="info">
 					<h2 class="titles">Me</h2>

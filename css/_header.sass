@@ -1,6 +1,9 @@
 /*-------------HEADER-------------*/
 html
+	scroll-behavior: smooth
 	box-sizing: border-box
+	::-webkit-scrollbar
+		display: none
 *,
 *:after,
 *:before 
@@ -45,6 +48,11 @@ body
 				cursor: pointer
 				border: none
 				border-radius: 50%
+				+telefono
+					&:active
+						transition: all .7s 
+						transform: rotate(360deg)
+						background-color: #4b9b639d
 				+tablet()
 					&:hover
 						transition: all .8s 

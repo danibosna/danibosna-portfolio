@@ -1,16 +1,36 @@
 //variables
-const btnMn = document.querySelector('.btn-menu');
+const btnMn = document.querySelector('#button');
 const menu = document.querySelector('#menu');
-const cerrarModal = document.querySelector('.close');
-const abrirModal = document.querySelector('.cta');
-const modal = document.querySelector('.modal');
-const modalCont = document.querySelector('.modal-container');
+const cerrarModal = document.querySelector('#close');
+const abrirModal = document.querySelector('#cta');
+const modal = document.querySelector('#modal');
+const modalCont = document.querySelector('#modal-cont');
+const port = document.querySelector('#port');
+const especialidad = document.querySelector('#especialidad');
+const experiencia = document.querySelector('#experiencia');
+const skill = document.querySelector('#skill');
 
 eventListeners();
 function eventListeners() {
     btnMn.addEventListener('click', mostrarMenu);
     abrirModal.addEventListener('click', mostrarModal);
     cerrarModal.addEventListener('click', ocultarModal);
+    port.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo(0, 0);
+    });
+    especialidad.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo(0, 662.4000244140625);
+    });
+    experiencia.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo(0, 1025.5999755859375);
+    });
+    skill.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo(0, 999999);
+    });
     window.addEventListener('click', (e) => {
         if(e.target == modalCont) {
             modal.classList.toggle("modal-close");
@@ -19,6 +39,7 @@ function eventListeners() {
                 modalCont.style.visibility = "hidden";
             }, 900);
         }
+        console.log(e.target);
     });
 }
 
