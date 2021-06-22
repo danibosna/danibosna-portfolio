@@ -2,29 +2,67 @@
 .second
 	display: flex
 	flex-direction: column
-	#experience 
-	.titles 
-		+titles($font, bold, 3px, 1px dashed black, 25px)
-	ul 
-		.inline 
-			display: inline-block
-			margin-left: 28px
-			h1 
-				font-size: 6em
-			p 
-				padding-top: 30px
-				margin-left: 5px
-	#portfolio
-	.titles 
-		+titles($font, bold, 3px, 1px dashed black, 25px)
-	.port 
-		padding: 20px
-		a 
-			margin: 15px
-			display: inline-block
-			img 
-				width: 64px
-				height: 64px
+	.experience 
+		margin: 0
+		padding: 2rem
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-content: center
+		.titles 
+			color: rgba(255, 255, 255, 0.8)
+			+titles($font, bold, 3px, 1px dashed rgba(255, 255, 255, 0.8), 25px)
+		ul
+			display: flex
+			flex-direction: column
+			flex-wrap: wrap
+			max-height: 1000px
+			justify-content: space-around
+			padding: 2rem
+			margin: 0
+			li
+				box-shadow: 3px 3px 5px 4px rgba(0,0,0,0.75)
+				background-color: rgba(255, 255, 255, 0.2)
+				backdrop-filter: blur(20px)
+				border: solid 1px rgba(255, 255, 255, 0.3)
+				border-radius: 3px
+				width: calc( 33.3% - 1rem )
+				margin-bottom: 1rem
+				padding: 1rem 
+				display: flex
+				flex-direction: column
+				justify-content: center
+				h1 
+					font-size: 6em
+					margin: 0 auto
+				p 
+					margin: 0 auto 1rem auto
+					padding: 0 1rem 1rem 1rem
+					text-align: center
+					border-bottom: 1px solid white
+					max-width: 90%
+				img
+					max-width: 50%
+					margin: 0 auto			
+	.skills
+		padding: 2rem
+		display: flex
+		flex-direction: column
+		justify-content: center
+		.titles 
+			color: rgba(255, 255, 255, 0.8)
+			+titles($font, bold, 3px, 1px dashed rgba(255, 255, 255, 0.8), 25px)
+		.port 
+			box-shadow: 3px 3px 5px 4px rgba(0,0,0,0.75)
+			background-color: #070707
+			padding: 1rem
+			width: 70%
+			display: flex
+			align-self: center
+			a 
+				margin: 15px
+				img 
+					max-width: 100%
 	.modal-container
 		visibility: hidden
 		opacity: 0

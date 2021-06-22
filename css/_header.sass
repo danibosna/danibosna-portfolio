@@ -1,14 +1,18 @@
 /*-------------HEADER-------------*/
+*,
+*::after,
+*::before 
+	box-sizing: inherit
 html
-	scroll-behavior: smooth
 	box-sizing: border-box
+	scroll-behavior: smooth
 	::-webkit-scrollbar
 		display: none
-*,
-*:after,
-*:before 
-	box-sizing: inherit
 body
+	background: rgb(2,0,36)
+	background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,194,32,1) 39%, rgba(0,0,0,1) 55%, rgba(4,107,27,1) 100%)
+	background-repeat: no-repeat
+	background-size: cover
 	header
 		position: fixed
 		width: 100%
