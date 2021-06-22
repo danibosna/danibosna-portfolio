@@ -16,22 +16,29 @@
 			display: flex
 			flex-direction: column
 			flex-wrap: wrap
-			max-height: 1000px
 			justify-content: space-around
 			padding: 2rem
 			margin: 0
+			+tablet()
+				max-height: 1000px	
 			li
 				box-shadow: 3px 3px 5px 4px rgba(0,0,0,0.75)
 				background-color: rgba(255, 255, 255, 0.2)
 				backdrop-filter: blur(20px)
 				border: solid 1px rgba(255, 255, 255, 0.3)
 				border-radius: 3px
-				width: calc( 33.3% - 1rem )
 				margin-bottom: 1rem
 				padding: 1rem 
 				display: flex
 				flex-direction: column
 				justify-content: center
+				+telefono()
+					width: 90%
+				+tablet()
+					width: calc( 50% - 1rem )
+				+desktop()
+					width: calc( 33.3% - 1rem )
+
 				h1 
 					font-size: 6em
 					margin: 0 auto
@@ -56,9 +63,11 @@
 			box-shadow: 3px 3px 5px 4px rgba(0,0,0,0.75)
 			background-color: #070707
 			padding: 1rem
-			width: 70%
+			width: 100%
 			display: flex
 			align-self: center
+			+tablet()
+				width: 70%
 			a 
 				margin: 15px
 				img 

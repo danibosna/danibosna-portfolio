@@ -234,10 +234,14 @@ body header .lista-close {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 1000px;
   justify-content: space-around;
   padding: 2rem;
   margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  .second .experience ul {
+    max-height: 1000px;
+  }
 }
 .second .experience ul li {
   box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, 0.75);
@@ -245,12 +249,26 @@ body header .lista-close {
   backdrop-filter: blur(20px);
   border: solid 1px rgba(255, 255, 255, 0.3);
   border-radius: 3px;
-  width: calc( 33.3% - 1rem );
   margin-bottom: 1rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media only screen and (min-width: 350px) {
+  .second .experience ul li {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .second .experience ul li {
+    width: calc( 50% - 1rem );
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .second .experience ul li {
+    width: calc( 33.3% - 1rem );
+  }
 }
 .second .experience ul li h1 {
   font-size: 6em;
@@ -285,9 +303,14 @@ body header .lista-close {
   box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, 0.75);
   background-color: #070707;
   padding: 1rem;
-  width: 70%;
+  width: 100%;
   display: flex;
   align-self: center;
+}
+@media only screen and (min-width: 768px) {
+  .second .skills .port {
+    width: 70%;
+  }
 }
 .second .skills .port a {
   margin: 15px;
@@ -380,13 +403,25 @@ body header .lista-close {
 }
 
 /*------Footer--------*/
-footer .img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+footer {
+  display: inline-flex;
 }
-footer .img img {
-  width: 50%;
+footer .foot-btn {
+  height: 2.5rem;
+  width: 1rem;
+  background-color: #000000;
+  color: #00c71b;
+  border: none;
+  border-radius: 5px;
+  order: 2;
+  margin-left: -2px;
+}
+footer .footer-container {
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  order: 1;
 }
 footer .chatBot {
   z-index: 1100;
