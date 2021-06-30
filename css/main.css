@@ -16,6 +16,7 @@ html ::-webkit-scrollbar {
 }
 
 body {
+  font-family: "Roboto", "Open Sans", sans-serif;
   background: #020024;
   background: radial-gradient(circle, #020024 0%, #00c220 39%, black 55%, #046b1b 100%);
   background-repeat: no-repeat;
@@ -36,7 +37,6 @@ body header .container .logos {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: "Roboto", "Open Sans", sans-serif;
 }
 body header .container .logos .logo {
   display: flex;
@@ -403,26 +403,34 @@ body header .lista-close {
 }
 
 /*------Footer--------*/
-footer {
+.footer-container {
   display: inline-flex;
 }
-footer .foot-btn {
-  height: 2.5rem;
-  width: 1rem;
+.footer-container .foot-btn {
   background-color: #000000;
   color: #00c71b;
   border: none;
-  border-radius: 5px;
-  order: 2;
-  margin-left: -2px;
+  border-radius: 3px;
+  cursor: pointer;
+  position: absolute;
 }
-footer .footer-container {
-  background-color: #fff;
-  padding: 1rem;
-  display: flex;
+.footer-container .social {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1rem;
   justify-content: space-around;
-  order: 1;
+  transition: all 0.5s;
+  transform: translateX(0%);
 }
-footer .chatBot {
+.footer-container .social img {
+  margin-right: 1.5rem;
+}
+.footer-container .foot-close {
+  transform: translateX(-200%);
+  visibility: hidden;
+  opacity: 0;
+}
+.footer-container .chatBot {
   z-index: 1100;
 }

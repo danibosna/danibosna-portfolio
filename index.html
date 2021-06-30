@@ -7,8 +7,6 @@
 	<title>Daniel Boscan</title>
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto">
-	<!-- hoja de animateIt -->
-	<link rel="stylesheet" href="css/animations.css">
 	<!-- hojas del nivo-slider -->
 	<link rel="stylesheet" href="css/nivo-slider.css">
 	<link rel="stylesheet" href="themes/default/default.css">
@@ -123,12 +121,14 @@
 		</div>
 	</section>
 	<footer>
-		<button id="foot-btn" class="foot-btn">></button>
-		<div class="footer-container">
-			<img src="img/github.png" alt="">
-			<img src="img/paypal.png" alt="">
-			<img src="img/twitter.png" alt="">
-		</div>
+		<section class="footer-container">
+			<button id="foot-btn" class="foot-btn">></button>
+			<div class="social">
+				<img src="img/github.png" alt="">
+				<img src="img/paypal.png" alt="">
+				<img src="img/twitter.png" alt="">
+			</div>
+		</section>
 		<df-messenger
 		intent="WELCOME"
 		chat-title="DialogflowMessenger"
@@ -144,7 +144,6 @@
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery.nivo.slider.js"></script>
-    <script src="js/css3-animate-it.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
