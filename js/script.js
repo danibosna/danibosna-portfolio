@@ -9,6 +9,8 @@ const port = document.querySelector('#port');
 const especialidad = document.querySelector('#especialidad');
 const experiencia = document.querySelector('#experiencia');
 const skill = document.querySelector('#skill');
+const btnFoot = document.querySelector('#foot-btn');
+const footCont = document.querySelector('#foot-cont');
 
 eventListeners();
 function eventListeners() {
@@ -40,6 +42,19 @@ function eventListeners() {
             }, 900);
         }
         console.log(e.target);
+    });
+    btnFoot.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        footCont.classList.toggle('foot-close');
+
+        if(footCont.classList.contains('footer-container')) {
+            setTimeout(() => {
+                footCont.classList.remove('foot-close');
+            },900);
+        } else {
+            footCont.classList.add('foot-close');
+        }
     });
 }
 

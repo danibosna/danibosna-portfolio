@@ -405,14 +405,19 @@ body header .lista-close {
 /*------Footer--------*/
 .footer-container {
   display: inline-flex;
+  transition: all 0.5s;
+  transform: translateX(0%);
+  position: fixed;
+  bottom: 0.2rem;
 }
 .footer-container .foot-btn {
   background-color: #000000;
   color: #00c71b;
   border: none;
   border-radius: 3px;
+  margin-left: -5px;
   cursor: pointer;
-  position: absolute;
+  position: relative;
 }
 .footer-container .social {
   background-color: rgba(255, 255, 255, 0.2);
@@ -420,17 +425,18 @@ body header .lista-close {
   border: solid 1px rgba(255, 255, 255, 0.3);
   padding: 0.5rem 1rem;
   justify-content: space-around;
-  transition: all 0.5s;
-  transform: translateX(0%);
+  display: flex;
+  order: -1;
 }
 .footer-container .social img {
   margin-right: 1.5rem;
 }
-.footer-container .foot-close {
-  transform: translateX(-200%);
-  visibility: hidden;
-  opacity: 0;
+
+.foot-close {
+  transform: translateX(-95%);
+  transition: all 0.5s;
 }
-.footer-container .chatBot {
+
+.chatBot {
   z-index: 1100;
 }
