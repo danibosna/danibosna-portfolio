@@ -48,12 +48,12 @@ function eventListeners() {
 
         footCont.classList.toggle('foot-close');
 
-        if(footCont.classList.contains('footer-container')) {
+        if(footCont.classList.contains('foot-close')) {
             setTimeout(() => {
-                footCont.classList.remove('foot-close');
+                footCont.classList.remove('foot-container');
             },900);
         } else {
-            footCont.classList.add('foot-close');
+            footCont.classList.add('footer-container');
         }
     });
 }
