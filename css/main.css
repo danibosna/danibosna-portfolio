@@ -232,17 +232,10 @@ body header .lista-close {
   margin-bottom: 25px;
 }
 .second .experience ul {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 2rem;
-  margin: 0;
-}
-@media only screen and (min-width: 768px) {
-  .second .experience ul {
-    max-height: 1000px;
-  }
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
 }
 .second .experience ul li {
   box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, 0.75);
@@ -251,26 +244,10 @@ body header .lista-close {
   -webkit-backdrop-filter: blur(20px);
   border: solid 1px rgba(255, 255, 255, 0.3);
   border-radius: 3px;
-  margin-bottom: 1rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-@media only screen and (min-width: 350px) {
-  .second .experience ul li {
-    width: 90%;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .second .experience ul li {
-    width: calc( 50% - 1rem );
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .second .experience ul li {
-    width: calc( 33.3% - 1rem );
-  }
 }
 .second .experience ul li h1 {
   font-size: 6em;
@@ -292,6 +269,7 @@ body header .lista-close {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 5rem;
 }
 .second .skills .titles {
   color: rgba(255, 255, 255, 0.8);
@@ -412,6 +390,8 @@ body header .lista-close {
   position: fixed;
   z-index: 1000;
   bottom: 0.2rem;
+  width: 30%;
+  height: 25%;
 }
 .footer-container .foot-btn {
   background-color: #000000;
@@ -431,9 +411,11 @@ body header .lista-close {
   justify-content: space-around;
   display: flex;
   order: -1;
+  width: 100%;
 }
 .footer-container .social img {
-  margin-right: 1.5rem;
+  max-width: 100%;
+  height: 95%;
 }
 
 .foot-close {
