@@ -234,8 +234,8 @@ body header .lista-close {
 .second .experience ul {
   display: grid;
   gap: 1rem;
-  grid-auto-rows: 22rem;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
 }
 .second .experience ul li {
   box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, 0.75);
@@ -284,16 +284,16 @@ body header .lista-close {
   background-color: #070707;
   padding: 1rem;
   width: 100%;
-  display: flex;
+  display: grid;
   align-self: center;
+  column-gap: 1.5rem;
+  grid-auto-rows: 7.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 5rem), 1fr));
 }
 @media only screen and (min-width: 768px) {
   .second .skills .port {
     width: 70%;
   }
-}
-.second .skills .port a {
-  margin: 15px;
 }
 .second .skills .port a img {
   max-width: 100%;
@@ -390,8 +390,14 @@ body header .lista-close {
   position: fixed;
   z-index: 1000;
   bottom: 0.2rem;
-  width: 30%;
-  height: 25%;
+  width: 15rem;
+  height: 5rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer-container {
+    width: 25rem;
+    height: 6rem;
+  }
 }
 .footer-container .foot-btn {
   background-color: #000000;

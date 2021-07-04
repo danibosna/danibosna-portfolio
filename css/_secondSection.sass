@@ -15,7 +15,7 @@
 		ul
 			display: grid
 			gap: 1rem
-			grid-auto-rows: 22rem
+			grid-auto-rows: auto
 			grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr))
 			li
 				box-shadow: 3px 3px 5px 4px rgba(0,0,0,0.75)
@@ -54,14 +54,15 @@
 			background-color: #070707
 			padding: 1rem
 			width: 100%
-			display: flex
+			display: grid
 			align-self: center
+			column-gap: 1.5rem
+			grid-auto-rows: 7.5rem
+			grid-template-columns: repeat(auto-fill, minmax(min(100%, 5rem), 1fr))
 			+tablet()
 				width: 70%
-			a 
-				margin: 15px
-				img 
-					max-width: 100%
+			img 
+				max-width: 100%
 	.modal-container
 		visibility: hidden
 		opacity: 0
