@@ -11,6 +11,7 @@ const experiencia = document.querySelector('#experiencia');
 const skill = document.querySelector('#skill');
 const btnFoot = document.querySelector('#foot-btn');
 const footCont = document.querySelector('#foot-cont');
+const twitter = document.querySelector('#tw');
 
 eventListeners();
 function eventListeners() {
@@ -56,6 +57,7 @@ function eventListeners() {
             footCont.classList.add('footer-container');
         }
     });
+    twitter.addEventListener('click', location.href = "www.twitter.com" );
 }
 
 //funciones
