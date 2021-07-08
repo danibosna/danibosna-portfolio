@@ -61,7 +61,7 @@ function eventListeners() {
         }
     });
     githubLink.addEventListener('click', (e) =>{ e.preventDefault();
-      return location.href = "https://github.com/AzazelMaquiavelo";
+      return window.open('https://github.com/AzazelMaquiavelo', '_blank');
     });
     paypalLink.addEventListener('click', (e) =>{ e.preventDefault();
       return location.href = "https://paypal.me/bosnalink?locale.x=es_XC"; 
