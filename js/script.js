@@ -57,7 +57,9 @@ function eventListeners() {
             footCont.classList.add('footer-container');
         }
     });
-    twitter.addEventListener('click', location.href = "www.twitter.com" );
+    twitter.addEventListener('click', (e) =>{ e.preventDefault();
+      return location.href = "www.twitter.com" 
+    });
 }
 
 //funciones
