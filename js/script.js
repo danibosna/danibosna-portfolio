@@ -58,7 +58,7 @@ function eventListeners() {
         }
     });
     twitter.addEventListener('click', (e) =>{ e.preventDefault();
-      return location.href = "www.twitter.com" 
+      return location.href = "https://www.linkedin.com/mwlite/in/daniel-boscan-nava-a12100104" 
     });
 }
 
