@@ -287,6 +287,7 @@ body header .lista-close {
   display: grid;
   align-self: center;
   column-gap: 1.5rem;
+  row-gap: 0.2rem;
   grid-auto-rows: 7.5rem;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 5rem), 1fr));
 }
@@ -295,7 +296,7 @@ body header .lista-close {
     width: 70%;
   }
 }
-.second .skills .port a img {
+.second .skills .port img {
   max-width: 100%;
 }
 .second .modal-container {
@@ -393,7 +394,7 @@ body header .lista-close {
   width: 15rem;
   height: 5rem;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .footer-container {
     width: 25rem;
     height: 6rem;

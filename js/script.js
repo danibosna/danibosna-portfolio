@@ -11,7 +11,10 @@ const experiencia = document.querySelector('#experiencia');
 const skill = document.querySelector('#skill');
 const btnFoot = document.querySelector('#foot-btn');
 const footCont = document.querySelector('#foot-cont');
-const twitter = document.querySelector('#tw');
+const githubLink = document.querySelector('#github');
+const paypalLink = document.querySelector('#paypal');
+const twitterLink = document.querySelector('#tw');
+const linkedLink = document.querySelector('#linkedin');
 
 eventListeners();
 function eventListeners() {
@@ -57,8 +60,17 @@ function eventListeners() {
             footCont.classList.add('footer-container');
         }
     });
-    twitter.addEventListener('click', (e) =>{ e.preventDefault();
-      return location.href = "https://www.linkedin.com/mwlite/in/daniel-boscan-nava-a12100104" 
+    githubLink.addEventListener('click', (e) =>{ e.preventDefault();
+      return location.href = "https://github.com/AzazelMaquiavelo";
+    });
+    paypalLink.addEventListener('click', (e) =>{ e.preventDefault();
+      return location.href = "https://paypal.me/bosnalink?locale.x=es_XC"; 
+    });
+    twitterLink.addEventListener('click', (e) =>{ e.preventDefault();
+      return location.href = "https://twitter.com/DanielBosna";
+    });
+    linkedLink.addEventListener('click', (e) =>{ e.preventDefault();
+      return location.href = "www.linkedin.com/in/danibosna"; 
     });
 }
 
