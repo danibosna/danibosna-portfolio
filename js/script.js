@@ -64,13 +64,13 @@ function eventListeners() {
       return window.open('https://github.com/AzazelMaquiavelo', '_blank');
     });
     paypalLink.addEventListener('click', (e) =>{ e.preventDefault();
-      return location.href = "https://paypal.me/bosnalink?locale.x=es_XC"; 
+      return window.open('https://paypal.me/bosnalink?locale.x=es_XC', '_blank'); 
     });
     twitterLink.addEventListener('click', (e) =>{ e.preventDefault();
-      return location.href = "https://twitter.com/DanielBosna";
+      return window.open('https://twitter.com/DanielBosna', '_blank');
     });
     linkedLink.addEventListener('click', (e) =>{ e.preventDefault();
-      return location.href = "www.linkedin.com/in/danibosna"; 
+      return window.open('www.linkedin.com/in/danibosna', '_blank'); 
     });
 }
 
