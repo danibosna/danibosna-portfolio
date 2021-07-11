@@ -70,7 +70,7 @@ function eventListeners() {
       return window.open('https://twitter.com/DanielBosna', '_blank');
     });
     linkedLink.addEventListener('click', (e) =>{ e.preventDefault();
-      return window.open('www.linkedin.com/in/danibosna', '_blank'); 
+      return window.open('https://linkedin.com/in/danibosna', '_blank'); 
     });
 }
 
