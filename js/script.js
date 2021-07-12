@@ -15,6 +15,8 @@ const githubLink = document.querySelector('#github');
 const paypalLink = document.querySelector('#paypal');
 const twitterLink = document.querySelector('#tw');
 const linkedLink = document.querySelector('#linkedin');
+const contact = document.querySelector('#contact');
+const logo = document.querySelector('#logo');
 
 eventListeners();
 function eventListeners() {
@@ -27,11 +29,11 @@ function eventListeners() {
     });
     especialidad.addEventListener('click', (e) => {
         e.preventDefault();
-        window.scrollTo(0, 662.4000244140625);
+        window.scrollTo(0, 753.5999755859375);
     });
     experiencia.addEventListener('click', (e) => {
         e.preventDefault();
-        window.scrollTo(0, 1025.5999755859375);
+        window.scrollTo(0, 1153.5999755859375);
     });
     skill.addEventListener('click', (e) => {
         e.preventDefault();
@@ -45,7 +47,6 @@ function eventListeners() {
                 modalCont.style.visibility = "hidden";
             }, 900);
         }
-        console.log(e.target);
     });
     btnFoot.addEventListener('click', (e) => {
         e.preventDefault();
@@ -71,6 +72,12 @@ function eventListeners() {
     });
     linkedLink.addEventListener('click', (e) =>{ e.preventDefault();
       return window.open('https://linkedin.com/in/danibosna', '_blank'); 
+    });
+    contact.addEventListener('click', (e) =>{ e.preventDefault();
+      return location.href = "../contact.html"; 
+    });
+    logo.addEventListener('click', (e) =>{ e.preventDefault();
+      return location.href = "../index.html"; 
     });
 }
 
