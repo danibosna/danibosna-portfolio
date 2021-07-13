@@ -38,8 +38,36 @@
 	<section class="form-container">
 		<h2 class="titles">Contactame.</h2>
 		<div class="form">
-		
-		</div>
+			<form action="" method="" enctype="multipart/form-data" id="proto_form">
+				<p>
+				<label for="name">Name *</label>
+				<input type="text" name="name" id="name" autofocus="autofocus" placeholder="Ej. Daniel" autocomplete="autocomplete" required="required"/>
+				</p>
+
+				<p>
+				<label for="email">E-mail</label>
+				<input type="email" name="email" id="email" placeholder="ejemplo@email.com" required="required"/>
+				</p>
+				
+				<p>
+				<label for="phone">Telf.</label>
+				<input type="tel" name="phone" id="phone" placeholder="+52 1 33 2233 2233"/>
+				</p>
+				
+				<p>
+				<label for="website">Website</label>
+				<input type="url" name="website" id="website" placeholder="http://www.tuweb.com"/>
+				</p>
+
+				<p>
+				<label for="envio">Fecha de Envio</label>
+				<input type="date" name="date" id="envio" min="2016-01-01"/>
+				</p>
+
+
+				<input type="submit" value="Enviar">
+			</form>
+		</div>	
 	</section>
 	<section class="second">
 		<div id="modal-cont" class="modal-container">
