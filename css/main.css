@@ -43,6 +43,8 @@ body header .container {
 }
 body header .container .logos {
   grid-column: 1/2;
+  display: inline-flex;
+  justify-self: center;
 }
 body header .container .logos .logo {
   text-align: center;
