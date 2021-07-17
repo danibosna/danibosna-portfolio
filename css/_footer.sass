@@ -1,39 +1,41 @@
 /*------Footer--------*/
-.footer-container
-    display: inline-flex
-    transition: all .5s
-    transform: translateX(0%)
-    position: fixed
-    z-index: 1000
-    bottom: .2rem
-    width: 15rem
-    height: 5rem
-    background-color: rgba(255, 255, 255, 0.2)
-    backdrop-filter: blur(20px)
-    -webkit-backdrop-filter: blur(20px)
-    +desktop()
-        width: 25rem
-        height: 6rem
-    .foot-btn
-        background-color: #000000
-        color: #00c71b
-        border: none
-        border-radius: 3px
-        margin-left: -5px
-        cursor: pointer
-        position: relative
-    .social
-        border: solid 1px rgba(255, 255, 255, 0.3)
-        padding: .5rem 1rem
-        justify-content: space-around
-        display: flex
-        order: -1
-        width: 100%
-        img
-            max-width: 100%
-            height: 95%
-.foot-close
-    transform: translateX(-95%)
-    transition: all .5s
-.chatBot
-    z-index: 1100
+footer
+    grid-row: 5/6
+    .footer-container
+        display: inline-flex
+        transition: all .5s
+        transform: translateX(0%)
+        position: fixed
+        z-index: 1000
+        bottom: .2rem
+        width: 15rem
+        height: 5rem
+        background-color: rgba(255, 255, 255, 0.2)
+        backdrop-filter: blur(20px)
+        -webkit-backdrop-filter: blur(20px)
+        +desktop()
+            width: 25rem
+            height: 6rem
+        .foot-btn
+            background-color: #000000
+            color: #00c71b
+            border: none
+            border-radius: 3px
+            margin-left: -5px
+            cursor: pointer
+            position: relative
+        .social
+            border: solid 1px rgba(255, 255, 255, 0.3)
+            padding: .5rem 1rem
+            justify-content: space-around
+            display: flex
+            order: -1
+            width: 100%
+            img
+                max-width: 100%
+                height: 95%
+    .foot-close
+        transform: translateX(-95%)
+        transition: all .5s
+    .chatBot
+        z-index: 1100

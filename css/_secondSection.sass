@@ -1,123 +1,118 @@
 /*----------SECOND SECTION----------*/
-.second
+.experience
 	display: flex
 	flex-direction: column
-	.experience 
-		margin: 0
-		padding: 2rem
-		display: flex
-		flex-direction: column
-		justify-content: center
-		align-content: center
-		ul
-			display: grid
-			gap: 1rem
-			grid-auto-rows: auto
-			grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr))
-			li
-				box-shadow: 3px 3px 5px 4px rgba(0,0,0,0.75)
-				background-color: rgba(255, 255, 255, 0.2)
-				backdrop-filter: blur(20px)
-				-webkit-backdrop-filter: blur(20px)
-				border: solid 1px rgba(255, 255, 255, 0.3)
-				border-radius: 3px
-				padding: 1rem 
-				display: flex
-				flex-direction: column
-				justify-content: center
-				h1 
-					font-size: 6em
-					margin: 0 auto
-				p 
-					margin: 0 auto 1rem auto
-					padding: 0 1rem 1rem 1rem
-					text-align: center
-					border-bottom: 1px solid white
-					max-width: 90%
-				img
-					max-width: 50%
-					margin: 0 auto			
-	.skills
-		padding: 2rem
-		display: flex
-		flex-direction: column
-		justify-content: center
-		margin-bottom: 5rem
-		.port 
-			box-shadow: 3px 3px 5px 4px rgba(0,0,0,0.75)
-			background-color: #070707
-			padding: 1rem
-			width: 100%
-			display: grid
-			align-self: center
-			column-gap: 1.5rem
-			row-gap: .2rem
-			grid-auto-rows: 7.5rem
-			grid-template-columns: repeat(auto-fill, minmax(min(100%, 5rem), 1fr))
-			+tablet()
-				width: 70%
-			img 
-				max-width: 100%
-	.modal-container
-		visibility: hidden
-		opacity: 0
-		position: fixed
-		z-index: 1000
-		width: 100%
-		height: 100vh
-		top: 0
-		left: 0
-		background: rgba(0, 0, 0, 0.5)
-		display: flex
-		justify-content: center
-		align-items: center
-		.modal
-			background-color: rgba(0, 0, 0, 0.8)
-			text-align: center
-			color: #e2dddd
-			padding: 0
+	grid-column: 2/6
+	grid-row: 4/5
+	ul
+		display: grid
+		gap: 1rem
+		grid-auto-rows: auto
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 300px))
+		padding: 0
+		li
+			box-shadow: 5px 5px 50px -12px #000000
+			background-color: #000000ea
+			border: solid 1px rgb(0, 0, 0)
+			border-radius: 3px
+			padding: 1rem 
 			display: flex
-			flex-wrap: nowrap
 			flex-direction: column
-			justify-content: space-between
-			position: relative
-			transition: transform 0.8s
-			transform: translateY(0%)
-			border-radius: 10px
-			width: 100%
-			height: 80%
-			top: 1rem
-			+tablet()
-				width: 40%
-			.close
-				height: 2rem
-				width: 2rem
-				background: #004206
-				align-self: flex-end
-				border: none
-				border-radius: 50px
-				cursor: pointer
-				line-height: 25px
-				position: absolute
-				top: .5rem
-				right: .5rem
+			justify-content: center
+			color: #e2dddd
 			img
-				margin: 1.5rem 0
-				max-width: 30%
-				height: 30%
-				align-self: center
-				border-radius: 5px
-			.info
-				padding: 0
-				margin: .5rem 1.5rem
-				height: 70%
-				overflow-y: scroll
-				+tablet()
-					overflow: hidden
-				p
-					font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
-					font-size: 20px
-					text-align: center
-					margin: 0	
-		.modal-close
-			transform: translateY(-200%)
+				max-width: 50%
+				margin: 0 auto			
+				border-bottom: 1px solid white
+				padding-bottom: .5rem
+			h1 
+				font-size: 6em
+				margin: 0 auto
+			p 
+				margin: 0 auto 1rem auto
+				padding: 0 1rem 1rem 1rem
+				text-align: center
+				max-width: 90%
+.skills
+	display: flex
+	flex-direction: column
+	justify-content: center
+	margin-bottom: 5rem
+	grid-column: 2/6
+	grid-row: 5/6
+	.port 
+		padding: 1rem
+		width: 100%
+		display: grid
+		align-self: center
+		column-gap: 1.5rem
+		row-gap: .2rem
+		grid-auto-rows: 7.5rem
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 5rem), 1fr))
+		+tablet()
+			width: 70%
+		img 
+			max-width: 100%
+.modal-container
+	visibility: hidden
+	opacity: 0
+	position: fixed
+	z-index: 1000
+	width: 100%
+	height: 100vh
+	top: 0
+	left: 0
+	background: rgba(0, 0, 0, 0.5)
+	display: flex
+	justify-content: center
+	align-items: center
+	.modal
+		background-color: rgba(0, 0, 0, 0.8)
+		text-align: center
+		color: #e2dddd
+		padding: 0
+		display: flex
+		flex-wrap: nowrap
+		flex-direction: column
+		justify-content: space-between
+		position: relative
+		transition: transform 0.8s
+		transform: translateY(0%)
+		border-radius: 10px
+		width: 100%
+		height: 80%
+		top: 1rem
+		+tablet()
+			width: 40%
+		.close
+			height: 2rem
+			width: 2rem
+			background: #004206
+			align-self: flex-end
+			border: none
+			border-radius: 50px
+			cursor: pointer
+			line-height: 25px
+			position: absolute
+			top: .5rem
+			right: .5rem
+		img
+			margin: 1.5rem 0
+			max-width: 30%
+			height: 30%
+			align-self: center
+			border-radius: 5px
+		.info
+			padding: 0
+			margin: .5rem 1.5rem
+			height: 70%
+			overflow-y: scroll
+			+tablet()
+				overflow: hidden
+			p
+				font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+				font-size: 20px
+				text-align: center
+				margin: 0	
+	.modal-close
+		transform: translateY(-200%)
