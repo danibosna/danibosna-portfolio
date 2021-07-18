@@ -11,7 +11,7 @@ html
 body
 	display: grid
 	gap: 1rem
-	grid-template-rows: 5% repeat(4, auto) 5%
+	grid-template-rows: repeat(4, auto)
 	grid-template-columns: 5% repeat(4, 1fr) 5%
 	font-family: $font
 	background: rgb(2,0,36)
@@ -19,8 +19,11 @@ body
 	background-repeat: no-repeat
 	background-size: cover
 	.container
+		display: flex
+		flex-direction: column
+		justify-content: center
 		align-self: center
-		max-width: 90%
+		max-width: 100%
 		background-color: rgba(255, 255, 255, 0.2)
 		backdrop-filter: blur(30px)
 		-webkit-backdrop-filter: blur(30px)

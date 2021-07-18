@@ -18,7 +18,7 @@ html ::-webkit-scrollbar {
 body {
   display: grid;
   gap: 1rem;
-  grid-template-rows: 5% repeat(4, auto) 5%;
+  grid-template-rows: repeat(4, auto);
   grid-template-columns: 5% repeat(4, 1fr) 5%;
   font-family: "Roboto", "Open Sans", sans-serif;
   background: #020024;
@@ -27,8 +27,11 @@ body {
   background-size: cover;
 }
 body .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-self: center;
-  max-width: 90%;
+  max-width: 100%;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
@@ -154,9 +157,6 @@ body header .lista-close {
 .first {
   grid-column: 2/6;
   grid-row: 3/4;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
 }
 .first .especialities {
   display: flex;
@@ -224,8 +224,6 @@ body header .lista-close {
 
 /*----------SECOND SECTION----------*/
 .experience {
-  display: flex;
-  flex-direction: column;
   grid-column: 2/6;
   grid-row: 4/5;
 }
@@ -265,22 +263,18 @@ body header .lista-close {
 }
 
 .skills {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin-bottom: 5rem;
   grid-column: 2/6;
   grid-row: 5/6;
 }
 .skills .port {
-  padding: 1rem;
-  width: 100%;
   display: grid;
   align-self: center;
   column-gap: 1.5rem;
   row-gap: 0.2rem;
   grid-auto-rows: 7.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 5rem), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 4.7rem), 1fr));
+  padding: 1rem;
 }
 @media only screen and (min-width: 768px) {
   .skills .port {
