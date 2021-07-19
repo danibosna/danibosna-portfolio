@@ -2,19 +2,19 @@
 const btnMn = document.querySelector('#button');
 const menu = document.querySelector('#menu');
 const cerrarModal = document.querySelector('#close');
-const abrirModal = document.querySelector('#cta');
+const abrirModal = document.querySelector('#me');
 const modal = document.querySelector('#modal');
 const modalCont = document.querySelector('#modal-cont');
 const port = document.querySelector('#port');
-const especialidad = document.querySelector('#especialidad');
-const experiencia = document.querySelector('#experiencia');
-const skill = document.querySelector('#skill');
+const especialidad = document.querySelector('#especialities');
+const experiencia = document.querySelector('#experience');
+const skill = document.querySelector('#skills');
 const btnFoot = document.querySelector('#foot-btn');
 const footCont = document.querySelector('#foot-cont');
 const githubLink = document.querySelector('#github');
 const twitterLink = document.querySelector('#tw');
 const linkedLink = document.querySelector('#linkedin');
-const cont = document.querySelector('#contacto');
+const cont = document.querySelector('#contact');
 const logo = document.querySelector('#logo');
 
 eventListeners();
