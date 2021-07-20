@@ -81,7 +81,9 @@ function eventListeners() {
 
 //nivoSlider
 $(window).on('load', function() {
-    $('#slider').nivoSlider(); 
+    $('#slider').nivoSlider({
+        pauseTime: 5000
+    }); 
 });
 
 //mostrar y ocultar menu
