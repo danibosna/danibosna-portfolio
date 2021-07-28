@@ -11,7 +11,7 @@
 </head>
 <body>
 	<header>
-		<div class="container">
+		<div class="cont">
 			<div class="logos">
 				<a href="#" id="logo" class="logo">
 					<h1>Dani Bosna</br> <span>Digital Solutions Developer.</span></h1>
@@ -21,52 +21,55 @@
 		</div>
 		<menu id="menu" class="lista lista-close">
 			<ul>
-				<li ><a href="#" id="cta"><i class="far fa-id-badge"></i>Me</a></li>
+				<li ><a href="#" id="me"><i class="far fa-id-badge"></i>Me</a></li>
 				<li><a href="#" id="port"> <i class="fas fa-folder-open"></i>Portafolio</a>
 					<ul class="sub-mn">
 						<li><a href="#">BoskiCookBook</a></li>
 						<li><a href="#">SimonnsTattoo</a></li>
 					</ul>
 				</li>
-				<li ><a href="#" id="especialidad"><i class="fas fa-chart-bar"></i>Especialities</a></li>
-				<li ><a href="#" id="experiencia"><i class="fas fa-code"></i>Experience</a></li>
-				<li ><a href="#" id="skill"><i class="fas fa-braille"></i>Skills</a></li>
+				<li ><a href="#" id="especialities"><i class="fas fa-chart-bar"></i>Especialities</a></li>
+				<li ><a href="#" id="experience"><i class="fas fa-code"></i>Experience</a></li>
+				<li ><a href="#" id="skills"><i class="fas fa-braille"></i>Skills</a></li>
 				<li ><a href="#" id="contact"><i class="far fa-comments"></i>Conversemos</a></li>
 			</ul>
 		</menu>
 	</header>	
 	<section class="form-container">
-		<h2 class="titles">Contactame.</h2>
 		<div class="form">
-			<form action="" method="" enctype="multipart/form-data" id="proto_form">
+			<form action="" method="" enctype="multipart/form-data" id="proto_form" class="form-page">
+				<h2 class="titles">Contactame.</h2>
 				<p>
-				<label for="name">Name *</label>
-				<input type="text" name="name" id="name" autofocus="autofocus" placeholder="Ej. Daniel" autocomplete="autocomplete" required="required"/>
+					<label for="name">Name *</label>
+					<input type="text" name="name" id="name" autofocus="autofocus" placeholder="Ej. Daniel" autocomplete="autocomplete" required="required"/>
 				</p>
 
 				<p>
-				<label for="email">E-mail</label>
-				<input type="email" name="email" id="email" placeholder="ejemplo@email.com" required="required"/>
+					<label for="email">E-mail</label>
+					<input type="email" name="email" id="email" placeholder="ejemplo@email.com" required="required"/>
 				</p>
 				
 				<p>
-				<label for="phone">Telf.</label>
-				<input type="tel" name="phone" id="phone" placeholder="+52 1 33 2233 2233"/>
+					<label for="phone">Telf.</label>
+					<input type="tel" name="phone" id="phone" placeholder="+52 1 33 2233 2233"/>
 				</p>
 				
 				<p>
-				<label for="website">Website</label>
-				<input type="url" name="website" id="website" placeholder="http://www.tuweb.com"/>
+					<label for="website">Website</label>
+					<input type="url" name="website" id="website" placeholder="http://www.tuweb.com"/>
 				</p>
 
 				<p>
-				<label for="envio">Fecha de Envio</label>
-				<input type="date" name="date" id="envio" min="2016-01-01"/>
+					<label for="envio">Fecha de Envio</label>
+					<input type="date" name="date" id="envio" min="2016-01-01"/>
 				</p>
-
 
 				<input type="submit" value="Enviar">
 			</form>
+			<div class="info-qr">
+				<img src="/img/icons/ws_qr_code.png" alt="" class="qr">
+
+			</div>
 		</div>	
 	</section>
 	<section id="modal-cont" class="modal-container">
@@ -89,7 +92,6 @@
 			<button id="foot-btn" class="foot-btn">></button>
 			<div class="social">
 				<a href="#" id="github"><img src="img/icons/github_git_icon_145985.png"></a>
-				<a href="#" id="paypal"><img src="img/icons/paypal_icon-icons.com_62739.png"></a>
 				<a href="#" id="tw"><img src="img/icons/twitter_socialnetwork_20007.png"></a>
 				<a href="#" id="linkedin"><img src="img/icons/linkedin_socialnetwork_17441.png"></a>
 			</div>

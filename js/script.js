@@ -2,20 +2,19 @@
 const btnMn = document.querySelector('#button');
 const menu = document.querySelector('#menu');
 const cerrarModal = document.querySelector('#close');
-const abrirModal = document.querySelector('#cta');
+const abrirModal = document.querySelector('#me');
 const modal = document.querySelector('#modal');
 const modalCont = document.querySelector('#modal-cont');
 const port = document.querySelector('#port');
-const especialidad = document.querySelector('#especialidad');
-const experiencia = document.querySelector('#experiencia');
-const skill = document.querySelector('#skill');
+const especialidad = document.querySelector('#especialities');
+const experiencia = document.querySelector('#experience');
+const skill = document.querySelector('#skills');
 const btnFoot = document.querySelector('#foot-btn');
 const footCont = document.querySelector('#foot-cont');
 const githubLink = document.querySelector('#github');
-const paypalLink = document.querySelector('#paypal');
 const twitterLink = document.querySelector('#tw');
 const linkedLink = document.querySelector('#linkedin');
-const contact = document.querySelector('#contact');
+const cont = document.querySelector('#contact');
 const logo = document.querySelector('#logo');
 
 eventListeners();
@@ -64,16 +63,13 @@ function eventListeners() {
     githubLink.addEventListener('click', (e) =>{ e.preventDefault();
       return window.open('https://github.com/AzazelMaquiavelo', '_blank');
     });
-    paypalLink.addEventListener('click', (e) =>{ e.preventDefault();
-      return window.open('https://paypal.me/bosnalink?locale.x=es_XC', '_blank'); 
-    });
     twitterLink.addEventListener('click', (e) =>{ e.preventDefault();
       return window.open('https://twitter.com/DanielBosna', '_blank');
     });
     linkedLink.addEventListener('click', (e) =>{ e.preventDefault();
       return window.open('https://linkedin.com/in/danibosna', '_blank'); 
     });
-    contact.addEventListener('click', (e) =>{ e.preventDefault();
+    cont.addEventListener('click', (e) =>{ e.preventDefault();
       return location.href = "../contact.html"; 
     });
     logo.addEventListener('click', (e) =>{ e.preventDefault();
@@ -85,7 +81,9 @@ function eventListeners() {
 
 //nivoSlider
 $(window).on('load', function() {
-    $('#slider').nivoSlider(); 
+    $('#slider').nivoSlider({
+        pauseTime: 5000
+    }); 
 });
 
 //mostrar y ocultar menu

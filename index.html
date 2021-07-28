@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto">
 	<!-- hojas del nivo-slider -->
 	<link rel="stylesheet" href="css/nivo-slider.css">
-	<link rel="stylesheet" href="themes/default/default.css">
+	<link rel="stylesheet" href="css/themes/default/default.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -24,29 +24,27 @@
 		</div>
 		<menu id="menu" class="lista lista-close">
 			<ul>
-				<li ><a href="#" id="cta"><i class="far fa-id-badge"></i>Me</a></li>
+				<li ><a href="#" id="me"><i class="far fa-id-badge"></i>Me</a></li>
 				<li><a href="#" id="port"> <i class="fas fa-folder-open"></i>Portafolio</a>
 					<ul class="sub-mn">
 						<li><a href="#">BoskiCookBook</a></li>
 						<li><a href="#">SimonnsTattoo</a></li>
 					</ul>
 				</li>
-				<li ><a href="#" id="especialidad"><i class="fas fa-chart-bar"></i>Especialities</a></li>
-				<li ><a href="#" id="experiencia"><i class="fas fa-code"></i>Experience</a></li>
-				<li ><a href="#" id="skill"><i class="fas fa-braille"></i>Skills</a></li>
+				<li ><a href="#" id="especialities"><i class="fas fa-chart-bar"></i>Especialities</a></li>
+				<li ><a href="#" id="experience"><i class="fas fa-code"></i>Experience</a></li>
+				<li ><a href="#" id="skills"><i class="fas fa-braille"></i>Skills</a></li>
 				<li ><a href="#" id="contact"><i class="far fa-comments"></i>Conversemos</a></li>
 			</ul>
 		</menu>
 	</header>	
 	
-	<section class="jumbotron">
-		<div class="slider-wrapper theme-default">
-			<div id="slider" class="nivoSlider" >     
-				<img src="img/boskibanner.jpg" alt="" />
-				<img src="img/slider simonns.png" alt="" />    
-			</div> 
-		</div>
-		<!-- <div class="education">
+	<section class="jumbotron slider-wrapper theme-default">
+		<div id="slider" class="nivoSlider" >     
+			<img src="img/wallpaper desktop boski.png" alt="" />
+			<img src="img/wallpaper desktop simonns.png" alt="" />    
+		</div> 
+		<!-- <div class="education container">
 			<h2 class="titles"><strong>Boski CookBook.</strong></h2>
 			<ul>
 				<li><p><strong>Html5, css3, Wordpress.</strong></p></li>
@@ -54,9 +52,9 @@
 			</ul>
 		</div> -->
 	</section>
-	<section class="first container">
+	<section class="special container">
 		<h2 class="titles">My Specialities</h2>
-		<div class="especialities">
+		<div class="specialities">
 			<a href="https://soundcloud.com/azazelmaquiavelo" target="_blank" class="img-z1 animated fadeInRightShort" data-id="1">
 				<img src="img/mixer.png" />
 				<h4>Audio Mastering</h4>
@@ -100,7 +98,7 @@
 	<section id="modal-cont" class="modal-container">
 		<div id="modal" class="personal modal modal-close">
 			<button id="close" class="close">X</button>
-			<img src="img/yo.jpg" alt="">
+			<img src="img/yo.png" alt="">
 			<div class="info">
 				<h2 class="titles">Me</h2>
 				<p>
@@ -113,11 +111,10 @@
 		</div>
 	</section>
 	<footer>
-		<section id="foot-cont" class="footer-container foot-close">
+		<section id="foot-cont" class="footer-container foot-close container">
 			<button id="foot-btn" class="foot-btn">></button>
 			<div class="social">
 				<a href="#" id="github"><img src="img/icons/github_git_icon_145985.png"></a>
-				<!-- <a href="#" id="paypal"><img src="img/icons/paypal_icon-icons.com_62739.png"></a> -->
 				<a href="#" id="tw"><img src="img/icons/twitter_socialnetwork_20007.png"></a>
 				<a href="#" id="linkedin"><img src="img/icons/linkedin_socialnetwork_17441.png"></a>
 			</div>

@@ -14,7 +14,6 @@ body
 	grid-template-rows: repeat(4, auto)
 	grid-template-columns: 5% repeat(4, 1fr) 5%
 	font-family: $font
-	background: rgb(2,0,36)
 	background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,194,32,1) 39%, rgba(0,0,0,1) 55%, rgba(4,107,27,1) 100%)
 	background-repeat: no-repeat
 	background-size: cover
@@ -23,7 +22,6 @@ body
 		flex-direction: column
 		justify-content: center
 		align-self: center
-		max-width: 100%
 		background-color: rgba(255, 255, 255, 0.2)
 		backdrop-filter: blur(30px)
 		-webkit-backdrop-filter: blur(30px)
@@ -37,18 +35,18 @@ body
 		grid-row: 1/2
 		position: fixed
 		width: 100%
-		z-index: 1000
+		z-index: 10
 		.cont
 			display: grid
 			grid-template-columns: auto 20%
-			background-color: #000000
+			background-color: $darkColor
 			.logos
 				grid-column: 1/2
 				display: inline-flex
 				justify-self: center
 				.logo
 					text-align: center
-					color: $colorPrimario
+					color: $lightColor
 					text-decoration: none
 					h1
 						margin: 0 auto
@@ -75,12 +73,12 @@ body
 					&:active
 						transition: all .7s 
 						transform: rotate(360deg)
-						background-color: #4b9b639d
+						background-color: $secondColor
 				+tablet()
 					&:hover
 						transition: all .8s 
 						transform: rotate(360deg)
-						background-color: #4b9b639d
+						background-color: $secondColor
 		.lista 
 			padding: 0
 			margin: 0 0 0 auto
@@ -108,11 +106,11 @@ body
 						display: flex
 						flex-direction: column
 						align-items: center
-						color: #fff
+						color: $lightColor
 						text-decoration: none
-						border-bottom: 1px solid #ffffff9f
+						border-bottom: 1px solid $lightColor
 						&:hover
-							color: #02fc4d
+							color: $secondColor
 					.sub-mn
 						display: none
 		.lista-close
