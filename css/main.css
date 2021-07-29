@@ -25,6 +25,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+body img {
+  width: 350;
+  height: 500;
+}
 body .container {
   display: flex;
   flex-direction: column;
