@@ -41,8 +41,17 @@
 	
 	<section class="jumbotron slider-wrapper theme-default">
 		<div id="slider" class="nivoSlider" >     
-			<img src="img/wallpaper desktop boski.png" alt="" />
-			<img src="img/wallpaper desktop simonns.png" alt="" />    
+			
+			<picture>
+				<source data-srcset="wallpaper desktop boski.png" media="(min-width:768px)">
+				<img src="img/wallpaper mobile boski.png" alt="" />
+			</picture>
+
+			<picture>
+				<source data-srcset="wallpaper desktop simonns.png" media="(min-width:768px)">
+				<img src="img/wallpaper mobile simonns.png" alt="" />
+			</picture>
+
 		</div> 
 		<!-- <div class="education container">
 			<h2 class="titles"><strong>Boski CookBook.</strong></h2>
@@ -98,7 +107,7 @@
 	<section id="modal-cont" class="modal-container">
 		<div id="modal" class="personal modal modal-close">
 			<button id="close" class="close">X</button>
-			<img src="img/yo.png" alt="">
+			<img src="img/yo.jpg" alt="">
 			<div class="info">
 				<h2 class="titles">Me</h2>
 				<p>

@@ -182,7 +182,7 @@ body header .lista-close {
   margin: 0;
   padding: 0;
 }
-.jumbotron .nivoSlider img {
+.jumbotron .nivoSlider picture img {
   height: 100%;
 }
 .jumbotron .education {
@@ -400,7 +400,7 @@ body header .lista-close {
   border-right: none;
   border-left: none;
   border-bottom-color: #f8f8f8;
-  color: #276B00;
+  color: #fff;
 }
 .form-container .form .form-page p input::placeholder {
   color: #276B00;
@@ -408,7 +408,6 @@ body header .lista-close {
 .form-container .form .form-page input[type=submit] {
   border-radius: 7px;
   background: #f8f8f8;
-  color: #0a0a0a;
 }
 .form-container .form .info-qr {
   display: flex;
