@@ -47,6 +47,17 @@ function eventListeners() {
             }, 900);
         }
     });
+    window.addEventListener('resize', () => {
+        const slice = document.querySelector('.nivo-main-image');
+        if(innerWidth <= 800) {
+            slice.src = "img/wallpaper-mobile-simonns-750w.png";
+            // slice.src = "img/wallpaper-mobile-boski-750w.png";
+        } else {
+            slice.src = "img/wallpaper-desktop-simonns-1522w.png";
+            // slice.src = "img/wallpaper-desktop-boski-1522w.png";
+        }
+
+    });
     btnFoot.addEventListener('click', (e) => {
         e.preventDefault();
 
