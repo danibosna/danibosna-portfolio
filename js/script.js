@@ -49,14 +49,21 @@ function eventListeners() {
     });
     window.addEventListener('resize', () => {
         const slice = document.querySelector('.nivo-main-image');
+        let imgMovil = ["img/wallpaper-mobile-simonns-750w.png", "img/wallpaper-mobile-boski-750w.png"];
+        let imgDesktop = ["img/wallpaper-desktop-simonns-1522w.png", "img/wallpaper-desktop-boski-1522w.png"];
         if(innerWidth <= 800) {
-            slice.src = "img/wallpaper-mobile-simonns-750w.png";
-            // slice.src = "img/wallpaper-mobile-boski-750w.png";
+            setInterval(() => {
+                imgMovil.forEach((image) => {
+                    slice.src = image;
+                });
+            }, 3000);
         } else {
-            slice.src = "img/wallpaper-desktop-simonns-1522w.png";
-            // slice.src = "img/wallpaper-desktop-boski-1522w.png";
+            setInterval(() => {
+                imgDesktop.forEach((image) => {
+                    slice.src = image;
+                });
+            }, 3000);
         }
-
     });
     btnFoot.addEventListener('click', (e) => {
         e.preventDefault();

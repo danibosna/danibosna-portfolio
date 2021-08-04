@@ -75,13 +75,13 @@
         
         // Set first background
         var sliderImg = $('<img/>').addClass('nivo-main-image');
-        sliderImg.attr('srcset', vars.currentImage.attr('srcset')).show();
+        sliderImg.attr('src', vars.currentImage.attr('src')).show();
         slider.append(sliderImg);
 
         // Detect Window Resize
         $(window).resize(function() {
             slider.children('img').width(slider.width());
-            sliderImg.attr('srcset', vars.currentImage.attr('srcset'));
+            sliderImg.attr('src', vars.currentImage.attr('src'));
             sliderImg.stop().height('auto');
             $('.nivo-slice').remove();
             $('.nivo-box').remove();
