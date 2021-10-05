@@ -47,7 +47,7 @@ function eventListeners() {
             }, 900);
         }
     });
-    window.addEventListener('resize', () => {
+    window.addEventListener('DOMContentLoaded', () => {
         const slice = document.querySelector('.nivo-main-image');
         let imgMovil = ["img/wallpaper-mobile-simonns-750w.png", "img/wallpaper-mobile-boski-750w.png"];
         let imgDesktop = ["img/wallpaper-desktop-simonns-1522w.png", "img/wallpaper-desktop-boski-1522w.png"];
