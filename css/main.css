@@ -21,7 +21,8 @@ body {
   grid-template-rows: repeat(4, auto);
   grid-template-columns: 5% repeat(4, 1fr) 5%;
   font-family: "Roboto", "Open Sans", sans-serif;
-  background: radial-gradient(circle, #020024 0%, #00c220 39%, black 55%, #046b1b 100%);
+  background: #00c220;
+  background: linear-gradient(138deg, #00c220 21%, black 38%, black 64%, #046b1b 100%);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -158,7 +159,7 @@ body header .lista-close {
 /*----------FIRST SECTION----------*/
 .special {
   grid-column: 2/6;
-  grid-row: 3/4;
+  grid-row: 4/5;
 }
 .special .specialities {
   display: flex;
@@ -218,7 +219,7 @@ body header .lista-close {
 /*----------SECOND SECTION----------*/
 .experience {
   grid-column: 2/6;
-  grid-row: 4/5;
+  grid-row: 3/4;
 }
 
 .card-wrapper {
@@ -338,11 +339,6 @@ body header .lista-close {
   margin: 0.5rem 1.5rem;
   height: 70%;
   overflow-y: scroll;
-}
-@media only screen and (min-width: 768px) {
-  .modal-container .modal .info {
-    overflow: hidden;
-  }
 }
 .modal-container .modal .info p {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
