@@ -51,12 +51,12 @@ function eventListeners() {
         const slice = document.querySelector('.nivoSlider');
     
         if(innerWidth <= 800) {
-            slice.innerHtml = `
+            slice.innerHTML = `
             <img src="img/wallpaper-mobile-boski-750w.png" alt="">
             <img src="img/wallpaper-mobile-simonns-750w.png" alt="">
             `;
         } else {
-            slice.innerHtml = `
+            slice.innerHTML = `
             <img src="img/wallpaper-desktop-boski-1522w.png" alt="">
             <img src="img/wallpaper-desktop-simonns-1522w.png" alt="">
             `;
