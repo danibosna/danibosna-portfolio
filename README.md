@@ -1,16 +1,13 @@
-### Hi there 👋
+# Dani Bosna :milky_way:	
+Con una pasion inagotable por la industria Tech, busco llevar soluciones a ambitos sociales que acarrean con sistemas deficientes.
+  Como **Desarrollador Web** busco implementar tecnologias que permitan dar respuestas oportunas y eficientes a cualquier mal que pueda padecer nuestra sociedad.
+  
+Me apasiona el **Open Source** y trabajar con Equipos que expandan nuestra cultura global, porque no hay mayor alegría en lo que hago que ayudar a triunfar a las personas que sueñan en grande, como yo.  Me gusta forjar relaciones sólidas con mis clientes y colaboradores, que luego se convierten en socios, que luego se hacen amigos.
 
-<!--
-**AzazelMaquiavelo/AzazelMaquiavelo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Mi Especialidad :rocket:		
 
-Here are some ideas to get you started:
+* *Front-end develop.*
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Mis Habilidades Tecnicas :man_technologist:
+
+* *Coding: Javascript*
