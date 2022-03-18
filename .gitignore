@@ -1,1 +1,10 @@
-node_modules
+# Dependency directories
+node_modules/
+
+# dotenv environment variables file
+.env
+.env.test
+.env-example
+
+# build / generate output
+dist
