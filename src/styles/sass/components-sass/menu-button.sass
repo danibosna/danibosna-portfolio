@@ -1,0 +1,21 @@
+.box__menu
+    margin-left: 1rem
+    padding: 0
+    align-self: center
+    grid-row: 1/2
+    background-color: #ffffff00
+    height: 4.3rem
+    width: 4.5rem
+    cursor: pointer
+    border: none
+    border-radius: 50%
+    +telefono
+        &:active
+            transition: all .7s
+            transform: rotate(360deg)
+            background-color: $secondColor
+    +tablet()
+        &:hover
+            transition: all .8s
+            transform: rotate(360deg)
+            background-color: $secondColor

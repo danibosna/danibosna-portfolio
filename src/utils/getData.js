@@ -7,8 +7,8 @@ const getData = async () => {
     const data = await response;
     return data;
   } catch (error) {
-    console.log('Fetch Error', error);
-  };
+    console.log("Fetch Error", error);
+  }
 };
 
 export default getData;
