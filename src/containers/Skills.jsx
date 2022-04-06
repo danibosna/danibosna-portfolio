@@ -1,6 +1,5 @@
 import React from 'react'
 import HardSkill from '../components/HardSkill.jsx';
-import SoftSkill from '../components/SoftSkill.jsx';
 import htmlImg from "@images/html_icon.png";
 import cssImg from "@images/css_icon.png";
 import jsImg from "@images/javascript_icon.png";
@@ -17,37 +16,35 @@ const Skills = () => {
       <h2 className="skills__titles titles">Skills</h2>
       <div className="skills__hard">
         <h3>Hard Skills</h3>
-        <HardSkill
-          src={htmlImg}
-        />
-        <HardSkill
-          src={cssImg}
-        />
-        <HardSkill
-          src={jsImg}
-        />
-        <HardSkill
-          src={sassImg}
-        />
-        <HardSkill
-          src={bootstrapImg}
-        />
-        <HardSkill
-          src={wordpressImg}
-        />
-        <HardSkill
-          src={gitImg}
-        />
-        <HardSkill
-          src={nodejsImg}
-        />
-        <HardSkill
-          src={githubSkillImg}
-        />
-      </div>
-      <div className="skills__soft">
-        <h3>Soft Skills</h3>
-        <SoftSkill/>
+        <div className='skill'>
+          <HardSkill
+            src={htmlImg}
+          />
+          <HardSkill
+            src={cssImg}
+          />
+          <HardSkill
+            src={jsImg}
+          />
+          <HardSkill
+            src={sassImg}
+          />
+          <HardSkill
+            src={bootstrapImg}
+          />
+          <HardSkill
+            src={wordpressImg}
+          />
+          <HardSkill
+            src={gitImg}
+          />
+          <HardSkill
+            src={nodejsImg}
+          />
+          <HardSkill
+            src={githubSkillImg}
+          />
+        </div>
       </div>
     </section>
   )
