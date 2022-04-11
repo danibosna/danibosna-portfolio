@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Input from '../templates/Input.jsx';
 import qr from '../assets/images/ws_qr_code.png';
 
 const ContactForm = () => {
+
+	const form = useRef(null);
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const formData = new FormData(form.current);
+		const data = {
+			username: formData.get('name'),
+			email: formData.get('email'),
+			telf: formData.get('phone'),
+			website: formData.get('website'),
+			message: formData.get('message')
+		}
+
+		console.log(data);
+	}
+
+
   return (
 		<div className="form container">
-			<form action="" method="" enctype="multipart/form-data" id="proto_form" className="form-page">
+			<form ref={form} action="" method="" encType="multipart/form-data" id="proto_form" className="form-page">
 				<h2 className="titles">Contactame.</h2>
 				<Input
 					label="*Name"
@@ -58,7 +76,7 @@ const ContactForm = () => {
 					rows="10"
 				/>
 
-				<input type="submit" value="Enviar" />
+				<input onClick={handleSubmit} type="submit" value="Enviar" />
 			</form>
 
 			<div className="info-qr">

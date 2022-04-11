@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import yoImg from "@images/yo_img.png";
+import AppContext from '../context/AppContext.js';
 
-const Modal = ({modalFunct}) => {
+const Modal = () => {
+  const {activeModal} = useContext(AppContext);
   return (
     <section id="modal-cont" className="modal__box">
       <div id="modal" className="modal">
-        <button id="close" className="close" onClick={modalFunct}>X</button>
+        <button id="close" className="close" onClick={activeModal}>X</button>
         <img src={yoImg} alt="" />
         <div className="info">
           <h2 className="titles">Me</h2>

@@ -4,7 +4,7 @@ import ContactForm from '@components/ContactForm.jsx';
 
 const ContactSect = () => {
   return (
-    <section class="form__box">
+    <section className="form__box">
       <ContactForm/>
 	  </section>
   )

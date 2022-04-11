@@ -1,12 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '@pages/Home.jsx';
 import NotFound from '@pages/NotFound.jsx';
 import Contact from '@pages/Contact.jsx';
+import AppContext from '../context/AppContext';
+import useViewModal from '../hooks/useViewModal';
 
 const App = () => {
+    const viewModal = useViewModal();
     return (
-        <Fragment>
+        <AppContext.Provider value={viewModal}>
             <BrowserRouter>
                 <Routes>
                     <Route index element={<Home/>}/>
@@ -14,7 +17,7 @@ const App = () => {
                     <Route path="*" element={<NotFound/>}/>
                 </Routes>
             </BrowserRouter>
-        </Fragment>
+        </AppContext.Provider>
     );
 }
 

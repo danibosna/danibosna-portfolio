@@ -4,7 +4,7 @@ import MenuButton from '@components/MenuButton.jsx';
 import SocialBox from '../components/SocialBox.jsx';
 import Menu from '@components/Menu.jsx';
 
-const Header = ({modalFunct}) => {
+const Header = () => {
     // view Menu
     const [toggle, setToggle] = useState(false);
     const handleToggle = () => {
@@ -27,13 +27,7 @@ const Header = ({modalFunct}) => {
                     LinkedIn = 'https://www.linkedin.com/in/danibosna/'
                 />
             </div>
-            {
-                toggle
-                &&
-                <Menu
-                    activeModal={modalFunct}
-                />
-            }
+            { toggle && <Menu/> }
         </header>
     );
 }

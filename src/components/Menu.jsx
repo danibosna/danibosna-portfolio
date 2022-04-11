@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
+import AppContext from '../context/AppContext.js';
 
-const Menu = ({activeModal}) => {
+const Menu = () => {
+
+    const {activeModal} = useContext(AppContext);
+
     return (
         <nav id="menu" className="menu menu-close">
                 <ul className="nav_list">
                     <li>
-                        <Link to="/" id="me" onClick={activeModal}>
+                        <Link to='/' id="me" onClick={activeModal}>
                             <i className="far fa-id-badge"></i>
                             <span>Me</span>
                         </Link>
