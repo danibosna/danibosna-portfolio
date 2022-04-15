@@ -1,15 +1,13 @@
-import React, {useState} from 'react';
+import React, {useContext} from 'react';
 import Title from '@components/Title.jsx';
 import MenuButton from '@components/MenuButton.jsx';
-import SocialBox from '../components/SocialBox.jsx';
+import SocialBox from '@components/SocialBox.jsx';
 import Menu from '@components/Menu.jsx';
+import MenuContext from '@context/MenuContex.js';
+
 
 const Header = () => {
-    // view Menu
-    const [toggle, setToggle] = useState(false);
-    const handleToggle = () => {
-        setToggle(!toggle);
-    }
+    const {toggle} = useContext(MenuContext);
 
     return (
         <header>
@@ -18,9 +16,7 @@ const Header = () => {
                     title='Dani Bosna'
                     subTitle='Digital Solutions Developer.'
                 />
-                <MenuButton
-                    handleToggle={handleToggle}
-                />
+                <MenuButton/>
                 <SocialBox
                     GitHub = 'https://github.com/danibosna'
                     Twitter = 'https://twitter.com/danibosna'

@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
 import yoImg from "@images/yo_img.png";
-import AppContext from '../context/AppContext.js';
+import ModalContext from '@context/ModalContext.js';
 
 const Modal = () => {
-  const {activeModal} = useContext(AppContext);
+  const {activeModal} = useContext(ModalContext);
   return (
     <section id="modal-cont" className="modal__box">
       <div id="modal" className="modal">

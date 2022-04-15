@@ -1,5 +1,5 @@
 import React from 'react'
-import HardSkill from '../components/HardSkill.jsx';
+import HardSkill from '@components/HardSkill.jsx';
 import htmlImg from "@images/html_icon.png";
 import cssImg from "@images/css_icon.png";
 import jsImg from "@images/javascript_icon.png";

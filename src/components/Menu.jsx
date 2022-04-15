@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
-import AppContext from '../context/AppContext.js';
+import ModalContext from '@context/ModalContext.js';
 
 const Menu = () => {
 
-    const {activeModal} = useContext(AppContext);
+    const {activeModal} = useContext(ModalContext);
 
     return (
         <nav id="menu" className="menu menu-close">

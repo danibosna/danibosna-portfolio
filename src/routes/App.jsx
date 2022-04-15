@@ -2,22 +2,32 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '@pages/Home.jsx';
 import NotFound from '@pages/NotFound.jsx';
-import Contact from '@pages/Contact.jsx';
-import AppContext from '../context/AppContext';
-import useViewModal from '../hooks/useViewModal';
+import Contacts from '@pages/Contacts.jsx';
+import ModalContext from '@context/ModalContext.js';
+import useViewModal from '@hooks/useViewModal.js';
+import MenuContext from '@context/MenuContex.js';
+import useViewMenu from '@hooks/useViewMenu.js';
+import ShoppingCartContext from '@context/ShoppingCartContext.js';
+import useCartState from '@hooks/useCartState.js';
 
 const App = () => {
+    const cartState = useCartState();
+    const viewMenu = useViewMenu();
     const viewModal = useViewModal();
     return (
-        <AppContext.Provider value={viewModal}>
+        <MenuContext.Provider value={viewMenu}>
+        <ModalContext.Provider value={viewModal}>
+        <ShoppingCartContext.Provider value={cartState}>
             <BrowserRouter>
                 <Routes>
                     <Route index element={<Home/>}/>
-                    <Route exact path='contact' element={<Contact/>}/>
+                    <Route exact path='contact' element={<Contacts/>}/>
                     <Route path="*" element={<NotFound/>}/>
                 </Routes>
             </BrowserRouter>
-        </AppContext.Provider>
+        </ShoppingCartContext.Provider>
+        </ModalContext.Provider>
+        </MenuContext.Provider>
     );
 }
 

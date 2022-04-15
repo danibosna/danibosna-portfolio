@@ -1,12 +1,12 @@
 import React, { Fragment, useContext } from 'react';
 import Header from '@containers/Header.jsx';
-import ContactSect from '@containers/ContactSect.jsx';
+import ContactSect from '@containers/Contact.jsx';
 import Modal from '@containers/Modal.jsx';
 import Footer from '@containers/Footer.jsx';
-import AppContext from '../context/AppContext.js';
+import ModalContext from '@context/ModalContext.js';
 
-const Contact = () => {
-  const {meToggle} = useContext(AppContext);
+const Contacts = () => {
+  const {meToggle} = useContext(ModalContext);
   return (
     <Fragment>
       <Header/>
@@ -17,4 +17,4 @@ const Contact = () => {
   )
 }
 
-export default Contact;
+export default Contacts;

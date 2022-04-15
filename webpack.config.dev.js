@@ -27,6 +27,8 @@ module.exports = {
       "@styles": path.resolve(__dirname, "src/styles/"),
       "@templates": path.resolve(__dirname, "src/templates/"),
       "@utils": path.resolve(__dirname, "src/utils/"),
+      "@hooks": path.resolve(__dirname, "src/hooks/"),
+      "@context": path.resolve(__dirname, "src/context/"),
     },
   },
   module: {
@@ -43,7 +45,7 @@ module.exports = {
         use: [{ loader: "html-loader" }],
       },
       {
-        test: /\.css|.s[ac]ss$/i,
+        test: /\.(css|s[ac]ss)$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {

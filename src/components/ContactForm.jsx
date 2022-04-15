@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import Input from '../templates/Input.jsx';
-import qr from '../assets/images/ws_qr_code.png';
+import Input from '@templates/Input.jsx';
+import qr from '@images/ws_qr_code.png';
 
 const ContactForm = () => {
 

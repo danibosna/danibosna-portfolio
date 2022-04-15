@@ -2,7 +2,7 @@ import React from 'react'
 import ContactForm from '@components/ContactForm.jsx';
 
 
-const ContactSect = () => {
+const Contact = () => {
   return (
     <section className="form__box">
       <ContactForm/>
@@ -10,4 +10,4 @@ const ContactSect = () => {
   )
 }
 
-export default ContactSect;
+export default Contact;

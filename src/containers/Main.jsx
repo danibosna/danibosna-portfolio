@@ -1,6 +1,6 @@
 import React from 'react';
-import useGetSomethings from '../hooks/useGetSomethings.js';
-import ProductItem from '../templates/ProductItem.jsx';
+import useGetSomethings from '@hooks/useGetSomethings.js';
+import ProductItem from '@templates/ProductItem.jsx';
 const API = process.env.API;
 
 const Main = () => {
