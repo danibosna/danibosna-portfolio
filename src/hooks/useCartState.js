@@ -1,30 +1,30 @@
-import { useState } from "react";
+import { useState } from 'react'
 
 const initialObjState = {
   cart: [],
-};
+}
 
 const useCartState = () => {
-  const [objState, setObjState] = useState(initialObjState);
-  const [toggleOrders, setToggleOrders] = useState(false);
+  const [objState, setObjState] = useState(initialObjState)
+  const [toggleOrders, setToggleOrders] = useState(false)
 
   const viewMyOrders = () => {
-    setToggleOrders(!toggleOrders);
-  };
+    setToggleOrders(!toggleOrders)
+  }
 
   const addToCart = (payload) => {
     setObjState({
       ...objState,
       cart: [...objState.cart, payload],
-    });
-  };
+    })
+  }
 
   const removeFromCart = (indexValue) => {
     setObjState({
       ...objState,
       cart: objState.cart.filter((_, index) => index !== indexValue),
-    });
-  };
+    })
+  }
 
   return {
     objState,
@@ -32,7 +32,7 @@ const useCartState = () => {
     toggleOrders,
     viewMyOrders,
     removeFromCart,
-  };
-};
+  }
+}
 
-export default useCartState;
+export default useCartState

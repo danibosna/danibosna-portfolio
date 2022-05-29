@@ -1,0 +1,23 @@
+@import ../utils/variables
+.articlesBox
+	grid-column: 3/9
+	padding-bottom: 0 !important
+	max-height: 80vh
+	overflow-y: overlay
+	&::-webkit-scrollbar
+		display: none
+	.title
+		margin-bottom: 0
+	.articles
+		display: flex
+		justify-content: space-around
+		text-align: center
+		color: $ligthColor
+	.articleScrollIcon
+		height: 5rem
+		width: 5rem
+		color: $Color1
+		position: absolute
+		z-index: 10
+		bottom: 8rem
+		right: 25%

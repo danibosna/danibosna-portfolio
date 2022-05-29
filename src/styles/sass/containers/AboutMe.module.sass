@@ -1,0 +1,28 @@
+@import '../utils/variables'
+.meBox
+  display: grid
+  align-self: center
+  grid-column: 3/9
+  .me
+    display: flex
+    justify-content: space-between
+    .meImage
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 30rem
+      height: 100%
+      background: rgb(2,0,36)
+      background: linear-gradient(90deg, rgba(2,0,36,0) 20%, rgba(3,191,253,1) 50%, rgba(9,9,121,0) 80%)
+    .info
+      display: flex
+      flex-direction: column
+      margin: .5rem 1.5rem
+      width: 65%
+      overflow: hidden
+      p
+        font-size: 1.5rem
+        text-align: justify
+        margin: 0
+    .info >h2
+      align-self: flex-start

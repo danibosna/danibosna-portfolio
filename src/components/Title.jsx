@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link'
+import styles from '@styles/sass/components/Title.module.sass';
 
-const Title = ({title, subTitle}) => {
+const Title = ({title}) => {
     return (
-        <div className="title-box">
-            <Link to="/" id="title" className="title">
-                <h1>
-                    {title}<br />
-                    <span>{subTitle}</span>
+        <div className={styles.titleBox}>
+            <Link href="/" passHref>
+                <h1 className={styles.title}>
+                    {title}
                 </h1>
             </Link>
         </div>

@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
+import styles from '@styles/sass/components/HardSkill.module.sass';
 
-const HardSkill = ({src}) => {
+const HardSkill = ({src, alt}) => {
   return (
-    <div className="hard-skill">
-      <a href="/"><img src={src} /></a>
+    <div className={styles['hard-skill']}>
+      <figure>
+        <Image src={src} alt={alt} sizes="100vw" layout="responsive"/>
+      </figure>
     </div>
   )
 }

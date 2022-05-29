@@ -1,0 +1,14 @@
+@import ../utils/variables
+.projectsBox
+  grid-column: 3/9
+  height: 80vh
+  display: flex
+  flex-direction: column
+  align-self: center
+  .projectsWrapper
+    display: grid
+    gap: 1rem
+    grid-auto-rows: auto
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr))
+    padding: 0
+    overflow: hidden

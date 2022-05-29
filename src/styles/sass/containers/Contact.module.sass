@@ -1,0 +1,43 @@
+@import '../utils/variables'
+.contactsBox
+  display: grid
+  align-self: center
+  grid-column: 3/9
+  .contact
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    column-gap: 5rem
+    .form
+      display: grid
+      flex-direction: column
+      grid-column: 1/2
+      color: $ligthColor
+      p
+        display: flex
+        flex-direction: column
+        input
+          background: none
+          border-top: none
+          border-right: none
+          border-left: none
+          border-bottom-color: $ligthColor
+          color: $ligthColor
+        input::placeholder
+          color: $Color1
+      button
+        display: flex
+        justify-self: center
+        justify-content: center
+        border: none
+        background: unset
+        color: $Color1
+        &:hover
+          cursor: pointer
+        .submitIcon
+          height: 4.5rem
+          width: 6rem
+    .qr
+      display: grid
+      grid-column: 2/3
+      align-items: center
+      justify-content: center

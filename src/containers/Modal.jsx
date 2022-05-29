@@ -1,20 +1,30 @@
-import React, {useContext} from 'react';
-import yoImg from "@images/yo_img.png";
-import ModalContext from '@context/ModalContext.js';
+import React from 'react';
+import Image from 'next/image';
+import yoImg from "@assets/images/BTC.jpg";
+import Link from 'next/link';
+import MyButton from '@common/MyButton';
+import { XCircleIcon } from '@heroicons/react/outline';
+import styles from '@styles/sass/containers/Modal.module.sass';
 
-const Modal = () => {
-  const {activeModal} = useContext(ModalContext);
+const Modal = ({props}) => {
+  const { post } = props;
+
   return (
-    <section id="modal-cont" className="modal__box">
-      <div id="modal" className="modal">
-        <button id="close" className="close" onClick={activeModal}>X</button>
-        <img src={yoImg} alt="" />
-        <div className="info">
-          <h2 className="titles">Me</h2>
+    <section className={styles.modalBox}>
+      <div className={styles.modal}>
+        <Link href="/blog" passHref>
+          <MyButton>
+            <XCircleIcon className={styles.closeLinkIcon} />
+          </MyButton>
+        </Link>
+        <figure>
+          <Image src={yoImg} alt={"danibosna"} layout="intrinsic"/>
+        </figure>
+        <div className={styles.info}>
+          <h2 className={styles.titles}>Me</h2>
           <p>
             <strong>
-            Con una pasion inagotable por la industria Tech, busco llevar soluciones a ambitos sociales que acarrean con sistemas deficientes. Como Desarrollador Web busco implementar tecnologias que permitan dar respuestas oportunas y eficientes a cualquier mal que pueda padecer nuestra sociedad.<br />
-            Me apasiona el Open Source y trabajar con Equipos que expandan nuestra cultura global, porque no hay mayor alegría en lo que hago que ayudar a triunfar a las personas que sueñan en grande, como yo. Me gusta forjar relaciones sólidas con mis clientes y colaboradores, que luego se convierten en socios, que luego se hacen amigos.
+              {post.article}
             </strong>
           </p>
         </div>
