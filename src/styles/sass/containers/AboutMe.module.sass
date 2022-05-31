@@ -4,6 +4,8 @@
   align-self: center
   grid-column: 3/9
   overflow-y: scroll
+  &::-webkit-scrollbar
+    display: none
   .me
     display: flex
     justify-content: space-between
@@ -31,8 +33,5 @@
         font-size: 1.5rem
         text-align: justify
         margin: 0
-        overflow-y: scroll
-      +desktop()
-        overflow: unset
     .info >h2
       align-self: flex-start
