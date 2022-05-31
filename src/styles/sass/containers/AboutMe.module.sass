@@ -3,26 +3,36 @@
   display: grid
   align-self: center
   grid-column: 3/9
+  overflow-y: scroll
   .me
     display: flex
     justify-content: space-between
+    align-items: center
+    flex-direction: column
+    +tablet()
+      flex-direction: row
     .meImage
       display: flex
       align-items: center
       justify-content: center
-      width: 30rem
+      width: 30%
       height: 100%
       background: rgb(2,0,36)
       background: linear-gradient(90deg, rgba(2,0,36,0) 20%, rgba(3,191,253,1) 50%, rgba(9,9,121,0) 80%)
+      +telefono()
+        width: 50%
+        padding: 1.5rem
     .info
       display: flex
       flex-direction: column
       margin: .5rem 1.5rem
       width: 65%
-      overflow: hidden
       p
         font-size: 1.5rem
         text-align: justify
         margin: 0
+        overflow-y: scroll
+      +desktop()
+        overflow: unset
     .info >h2
       align-self: flex-start
