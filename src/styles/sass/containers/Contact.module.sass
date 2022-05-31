@@ -4,6 +4,10 @@
   align-self: center
   grid-column: 3/9
   overflow-y: scroll
+  &::-webkit-scrollbar
+    display: none
+  +desktop()
+    overflow: hidden
   .contact
     display: flex
     flex-direction: column
