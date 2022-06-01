@@ -16,13 +16,16 @@ function MyApp({ Component, pageProps, titleHead, descriptionHead }) {
         <title>{titleHead}</title>
         <meta name="description" content={descriptionHead} />
       </Head>
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-N84SKCFX2Y"></Script>
-      <Script id="google-analytics">{`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-N84SKCFX2Y');
-          `}</Script>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-T04GQRL8VP"></Script>
+      <Script id="google-analytics">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-T04GQRL8VP');
+      `}
+      </Script>
       <Script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1" />
       <MenuContext.Provider value={viewMenu}>
         <MainLayout>
