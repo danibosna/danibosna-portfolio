@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps, titleHead, descriptionHead }) {
         <meta name="description" content={descriptionHead} />
       </Head>
       <Script strategy="afterInteractive" async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
-      <Script strategy="afterInteractive" id="google-analytics">
+      <Script strategy="afterInteractive" async id="google-analytics">
         {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
