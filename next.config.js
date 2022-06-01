@@ -7,11 +7,12 @@ const pwaConfig = withPWA({
     dest: 'public',
     register: true,
     mode: 'production',
-    disable: false,
+    disable: process.env.NODE_ENV === 'development',
+    scope: '/app',
+    sw: 'service-worker.js',
   },
   reactStrictMode: true,
   images: {
-    domains: ['placeimg.com', 'api.lorem.space'],
     formats: ['image/webp'],
   },
   sassOptions: {
