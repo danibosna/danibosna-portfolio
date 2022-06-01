@@ -10,7 +10,8 @@
       "@hooks/*": ["hooks/*"],
       "@styles/*": ["styles/*"],
       "@common/*": ["common/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@services/*": ["services/*"]
     }
   }
 }
