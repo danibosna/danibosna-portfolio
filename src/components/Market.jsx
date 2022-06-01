@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import endPoints from '@services/api';
+import styles from '@styles/sass/containers/MyOrder.module.sass';
 
 const Market = () => {
 
-  useEffect(() => {
+	useEffect(() => {
     async function callMarket(){
       try {
         const response = await fetch(endPoints.ticker.getTicker);
@@ -19,9 +20,13 @@ const Market = () => {
     console.log(data);
   }
 
-  return (
-    <aside>
-      <table>
+	return (
+		<aside className={styles.MyOrder}>
+			<div className={styles['title-container']}>
+				<p>My order</p>
+			</div>
+			<div className={styles['my-order-content']}>
+			<table>
         <thead>
           <tr>
             <th>Symb</th>
@@ -31,8 +36,9 @@ const Market = () => {
         <tbody>
         </tbody>
       </table>
-    </aside>
-  )
+			</div>
+		</aside>
+	);
 }
 
-export default Market
+export default Market;
