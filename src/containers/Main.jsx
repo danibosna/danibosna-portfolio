@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <section className={styles.main}>
       <div id="resultado" className={styles.resultado}>
-        
+
       </div>
     </section>
   )
