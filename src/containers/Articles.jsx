@@ -34,7 +34,7 @@ const Articles = () => {
             titulo='Analisis Tecnico'
             src={chart}
             alt={"chart"}
-            info='la Importancia de una estrategia sin emociones para lograr la consistencia'
+            info='la Importancia de una estrategia sin emociones'
           />
         </div>
       </section>
