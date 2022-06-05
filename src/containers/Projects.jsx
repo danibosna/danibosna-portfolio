@@ -1,6 +1,6 @@
 import React from 'react';
 import Project from '@components/Project.jsx';
-import logo from '@assets/images/danibosna-logo.webp';
+import logo from '@assets/images/danibosna-logo-BG.png';
 import styles from '@styles/sass/containers/Projects.module.sass';
 
 const Projects = () => {

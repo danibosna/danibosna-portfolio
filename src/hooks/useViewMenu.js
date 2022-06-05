@@ -1,10 +1,10 @@
-import { useCycle } from 'framer-motion';
+import { useState } from 'react';
 
 const useViewMenu = () => {
   // view Menu
-  const [toggle, setToggle] = useCycle(false, true);
+  const [toggle, setToggle] = useState(false);
   const handleToggle = () => {
-    setToggle();
+    setToggle(!toggle);
   };
 
   return {

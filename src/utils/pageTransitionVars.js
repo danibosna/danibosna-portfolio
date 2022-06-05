@@ -1,12 +1,7 @@
 export const PAGE_TRANSITION = {
-  DURATION: 0.6,
+  DURATION: 1,
   EASE: [0.83, 0, 0.17, 1],
 };
-
-const easing = [0.175, 0.85, 0.42, 0.96];
-const TOTAL_TIME = PAGE_TRANSITION.DURATION;
-const delay = 0.5;
-const duration = TOTAL_TIME - delay;
 
 const pageMotionProps = {
   initial: { opacity: 0 },
@@ -27,33 +22,16 @@ const pageMotionProps = {
   },
 };
 
-export const menuAnimationVariant = {
+export const menuVariants = {
   initial: {
     opacity: 0,
+    y: '-100%',
   },
   animate: {
     opacity: 1,
-    transition: {
-      delayChildren: 0.5,
-    },
-  },
-};
-
-export const itemsAnimationVariant = {
-  initial: {
-    y: '-100%',
-    transition: {
-      duration: duration,
-      opacity: 0,
-      ease: easing,
-    },
-  },
-  animate: {
     y: '0%',
     transition: {
-      duration: duration,
-      opacity: 1,
-      ease: easing,
+      duration: 1,
     },
   },
 };

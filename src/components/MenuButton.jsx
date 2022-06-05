@@ -7,7 +7,7 @@ import styles from '@styles/sass/components/MenuButton.module.sass';
 const MenuButton = () => {
     const {handleToggle} = useContext(MenuContext);
     return (
-        <button type="button" className={styles.menuButton} onClick={handleToggle}>
+        <button type="button" className={styles.menuButton} onClick={handleToggle} >
             <Image src={logo} alt="logo" width="49" height="44" layout="intrinsic" />
         </button>
     );
