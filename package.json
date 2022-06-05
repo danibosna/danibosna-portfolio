@@ -1,7 +1,7 @@
 {
-  "name": "danibosna.github.io",
+  "name": "danibosna",
   "version": "1.0.0",
-  "description": "pruebas de portafolio",
+  "description": "Digital Portfolio",
   "private": true,
   "main": "App.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danibosna/danibosna.github.io.git"
+    "url": "git+https://github.com/danibosna/danibosna-Nextjs.git"
   },
   "keywords": [
     "webpack"
@@ -21,9 +21,9 @@
   "author": "DaniBosna <daniel.d.boscan@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danibosna/danibosna.github.io/issues"
+    "url": "https://github.com/danibosna/danibosna-Nextjs/issues"
   },
-  "homepage": "https://github.com/danibosna/danibosna.github.io#readme",
+  "homepage": "https://github.com/danibosna/danibosna-Nextjs#readme",
   "dependencies": {
     "@heroicons/react": "^1.0.6",
     "eslint-config-prettier": "^8.5.0",
