@@ -3,13 +3,15 @@ import Image from 'next/image';
 import Input from '@components/Input';
 import { ChevronDoubleRightIcon } from '@heroicons/react/solid'
 import qr from '@assets/images/ws_qr_code.png';
+import { useForm } from '@formspree/react';
 import styles from '@styles/sass/containers/Contact.module.sass';
 
 
 const Contact = () => {
-
+	const [formState, setFormState] = useForm("mayvzwjz");
+	
 	const form = useRef(null);
-
+	
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const formData = new FormData(form.current);
@@ -20,6 +22,12 @@ const Contact = () => {
 			website: formData.get('website'),
 			message: formData.get('message')
 		}
+		setFormState(data);
+	}
+
+
+	if (formState.succeeded) {
+			return window.location = "/";
 	}
 
 
@@ -28,7 +36,7 @@ const Contact = () => {
 			<h2 className={styles.titles}>Contactame.</h2>
 			<div className={styles.contact}>
 				<div className={styles.form}>
-					<form ref={form} action="mailto:daniel.d.boscan@gmail.com" method="POST" encType="text/plain" >
+					<form ref={form} action="https://formspree.io/f/mayvzwjz" onSubmit={handleSubmit} method="POST" encType="text/plain" >
 						<Input
 							tag="input"
 							label="*Name"
@@ -82,7 +90,7 @@ const Contact = () => {
 							rows="10"
 						/>
 
-						<button onClick={handleSubmit} type="submit">
+						<button type="submit" disabled={formState.submitting} >
 							<ChevronDoubleRightIcon className={styles.submitIcon} />
 						</button>
 					</form>
