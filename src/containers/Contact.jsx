@@ -20,8 +20,6 @@ const Contact = () => {
 			website: formData.get('website'),
 			message: formData.get('message')
 		}
-
-		console.log(data);
 	}
 
 
@@ -30,7 +28,7 @@ const Contact = () => {
 			<h2 className={styles.titles}>Contactame.</h2>
 			<div className={styles.contact}>
 				<div className={styles.form}>
-					<form ref={form} action="" method="" encType="multipart/form-data" >
+					<form ref={form} action="mailto:daniel.d.boscan@gmail.com" method="POST" encType="text/plain" >
 						<Input
 							tag="input"
 							label="*Name"
