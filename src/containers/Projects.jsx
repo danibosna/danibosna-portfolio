@@ -1,6 +1,7 @@
 import React from 'react';
 import Project from '@components/Project.jsx';
 import logo from '@assets/images/danibosna-logo-BG.png';
+import ecommerceLogo from '@assets/images/cart_market_store_ecommerce_icon_178867.png';
 import coin from '@assets/images/bitcoin.svg';
 import petImg from '@assets/images/pet_animal_document_history_paper_icon_124630.png';
 import imgSearch from '@assets/images/photo-photography-image-picture-folder_108645.png';
@@ -16,11 +17,11 @@ const Projects = () => {
       <h2 className={styles.titles}>Portfolio.</h2>
       <ul className={styles.projectsWrapper}>
         <Project
-          logo={logo}
-          title='DaniBosna'
-          info='Creacion y preparacion de contenido para desarrollo de portafolio'
-          date='Febrero 2020'
-          href='/'
+          logo={ecommerceLogo}
+          title='Ecommerce'
+          info='Clon EduCommerce'
+          date='Noviembre 2020'
+          href='https://danibosna-ecommerce.netlify.app/'
         />
         <Project
           logo={coin}
@@ -70,6 +71,13 @@ const Projects = () => {
           info='Consulta el clima en tu ciudad'
           date='Junio 2020'
           href='https://danibosna-api-clima.netlify.app/'
+        />
+        <Project
+          logo={logo}
+          title='DaniBosna'
+          info='Creacion y preparacion de contenido para desarrollo de portafolio'
+          date='Febrero 2020'
+          href='/'
         />
       </ul>
     </section>
