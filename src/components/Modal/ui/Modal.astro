@@ -1,0 +1,30 @@
+---
+import { ModalType } from "@/types/modal-type-enum";
+import AlertModal from "@/components/Alerts/ui/AlertModal.astro";
+import { cn } from "@/utils/utils";
+import ModalVideo from "./ModalVideo.astro";
+
+const modals = {
+  [ModalType.VIDEO]: ModalVideo,
+  [ModalType.ALERTS]: AlertModal,
+};
+
+const modalType = "video";
+
+const Component = modals[modalType];
+---
+
+{
+  false && (
+    <div class="absolute w-full top-0 flex items-center justify-center z-50 h-full glass py-8">
+      <div
+        class={cn(
+          "bg-white glass bg-opacity-30 rounded-[35px] p-8",
+          ModalType.VIDEO ? "" : "w-1/3",
+        )}
+      >
+        <Component />
+      </div>
+    </div>
+  )
+}
