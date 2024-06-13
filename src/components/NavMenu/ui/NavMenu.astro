@@ -1,0 +1,32 @@
+---
+import navigations from "../constants/nav-items";
+import logoIcon from "@/assets/images/danibosna-logo-white.webp";
+import { ItemAccordion } from "./ItemAccordion";
+import NavItem from "./NavItem.astro";
+---
+
+<nav
+  id="nav"
+  class={`lg:[grid-area:aside] flex justify-center pl-2 overflow-y-auto overflow-x-hidden clip-container`}
+>
+  <div class={`w-full h-full flex flex-col space-y-5`}>
+    <div
+      class={`w-full pt-3 px-1 flex flex-col justify-start text-xs font-bold md:mb-2 md:text-lg`}
+    >
+      <a href="/">
+        <img src={logoIcon.src} class="w-16 p-2" />
+      </a>
+    </div>
+    <div class={`nav-item w-full flex flex-col py-2 pl-2`}>
+      {
+        navigations?.map((item, index) =>
+          item.subItems && item.subItems.some((i) => i.showOnMenu == true) ? (
+            <ItemAccordion client:only="react" item={item} />
+          ) : (
+            <NavItem item={item} />
+          ),
+        )
+      }
+    </div>
+  </div>
+</nav>

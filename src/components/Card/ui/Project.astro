@@ -1,0 +1,35 @@
+---
+import linkIcon from "@/assets/icons/new-tab.svg";
+
+interface Props {
+  logo: string;
+  title: string;
+  extract: string;
+  date: string;
+  href: string;
+}
+
+const { logo, title, extract, date, href } = Astro.props;
+---
+
+<li class="glass clip-container">
+  <div class="flex">
+    <img class="w-1/3 py-6" src={logo} alt="logo" />
+    <div class="w-full space-y-5 my-2">
+      <h3
+        class="w-full text-3xl text-center font-semibold text-primary-foreground my-5"
+      >
+        {title}
+      </h3>
+      <p class="w-4/5 text-secondary text-start">
+        {extract}
+      </p>
+      <p class="text-secondary text-sm font-semibold">{date}</p>
+      <p class="w-full px-8">
+        <a class="w-full flex justify-end" href={href}>
+          <img src={linkIcon.src} alt="" />
+        </a>
+      </p>
+    </div>
+  </div>
+</li>

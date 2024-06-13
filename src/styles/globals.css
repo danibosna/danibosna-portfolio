@@ -1,17 +1,316 @@
-/*-------------GLOBALS-------------*/
-html {
-	box-sizing: border-box;
-	font-size: 62.5% ;/* 1 REM = 10px */
-	scroll-behavior: smooth;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
 }
-html::-webkit-scrollbar {
-  display: none;
+
+@layer base {
+  /* Estilo para navegadores Webkit (Chrome, Safari) */
+  ::-webkit-scrollbar {
+    height: 8px; /* Altura de la barra de desplazamiento horizontal */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(
+      0,
+      0,
+      0,
+      0.2
+    ); /* Color del thumb de la barra de desplazamiento */
+    border-radius: 4px; /* Bordes redondeados para el thumb */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4); /* Color del thumb al pasar el mouse */
+  }
+
+  * {
+    @apply border-border;
+    scrollbar-width: thin; /* Grosor de la barra de desplazamiento */
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* Color del thumb y del fondo */
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* Barra de desplazamiento auto-ocultable */
+  }
+  html {
+    font-family: "Montserrat Variable", system-ui, sans-serif;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+  input[type="tel"] {
+    @apply block w-full placeholder:text-muted-foreground focus-visible:outline-none focus-visible:bg-secondary focus-visible:text-white focus-visible:ring-0 focus-visible:ring-ring rounded-3xl border-transparent h-9 py-1 px-3 shadow-sm shadow-sky-500/10 bg-blue-100 focus:border-blue-500 focus:bg-white focus:ring-0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  tbody tr:first-child td {
+    /* Estilos para el primer hijo */
+    padding-top: 2rem;
+    /* padding-bottom: 0.5rem; */
+  }
+
+  #body {
+    height: 100vh;
+    background-size: 100% 100%;
+    background-position:
+      0px 0px,
+      0px 0px,
+      0px 0px,
+      0px 0px,
+      0px 0px,
+      0px 0px,
+      0px 0px,
+      0px 0px,
+      0px 0px,
+      0px 0px,
+      0px 0px;
+    background-image: radial-gradient(
+        18% 28% at 24% 50%,
+        #000000ff 7%,
+        #073aff00 100%
+      ),
+      radial-gradient(18% 28% at 18% 71%, #020303ff 6%, #073aff00 100%),
+      radial-gradient(70% 53% at 36% 76%, #020303ff 0%, #073aff00 100%),
+      radial-gradient(42% 53% at 15% 94%, #000000ff 7%, #073aff00 100%),
+      radial-gradient(42% 53% at 34% 72%, #020303ff 7%, #073aff00 100%),
+      radial-gradient(18% 28% at 35% 87%, #020303ff 7%, #073aff00 100%),
+      radial-gradient(31% 43% at 7% 98%, #000000ff 24%, #073aff00 100%),
+      radial-gradient(21% 37% at 72% 23%, #0000009c 24%, #073aff00 100%),
+      radial-gradient(35% 56% at 91% 74%, #002bcdf5 9%, #073aff00 100%),
+      radial-gradient(74% 86% at 67% 38%, #000000f5 24%, #073aff00 100%),
+      linear-gradient(125deg, #4eb5ffff 1%, #0600d1ff 100%);
+  }
+
+  #app {
+    height: 100%;
+    display: grid;
+    grid-template-areas: "aside main";
+    grid-template-columns: min-content 1fr;
+  }
+
+  #nav {
+    width: 250px;
+    transition: width 0.1s ease-in-out;
+    /* Otros estilos necesarios para tu menú */
+  }
+
+  #nav.contracted {
+    width: 70px; /* Ancho reducido para mostrar solo íconos */
+  }
+
+  #nav .nav-item {
+    display: flex;
+    /* Otros estilos para tus ítems de menú */
+  }
+
+  #nav .nav-item .nav-item-icon {
+    /* Estilos para tus íconos */
+  }
+
+  #nav.contracted .nav-item .nav-item-text {
+    display: none; /* Ocultar el texto cuando el menú esté contraído */
+    transition: display 0.1s ease-in-out;
+  }
+
+  /* Pantallas medianas (tablets) */
+  @media (max-width: 992px) {
+    #nav {
+      height: 100%;
+      position: fixed;
+      z-index: 9999;
+    }
+    #nav.contracted {
+    }
+  }
+
+  /* Pantallas pequeñas (teléfonos en modo paisaje y tablets más pequeñas) */
+  @media (max-width: 768px) {
+    #nav {
+      height: 100%;
+      position: fixed;
+      z-index: 9999;
+    }
+    #nav.contracted {
+    }
+  }
+
+  /* Pantallas extra pequeñas (teléfonos en modo retrato) */
+  @media (max-width: 639px) {
+    #app {
+      display: flex;
+    }
+    #btn-toggle {
+      display: none;
+    }
+    #nav {
+      height: 100%;
+      position: fixed;
+      z-index: 9999;
+    }
+    #nav.contracted {
+      height: 94px;
+      width: 70px;
+    }
+    #nav.contracted .nav-item {
+      display: none; /* Ocultar el texto cuando el menú esté contraído */
+      transition: display 0.1s ease-in-out;
+    }
+  }
+  #yt-iframe {
+    width: 800px;
+  }
 }
-*,
-*::after,
-*::before {
-	box-sizing: inherit;
+
+@layer components {
+  .clip-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(0.1rem);
+    -webkit-backdrop-filter: blur(0.1rem);
+    outline: 1px solid rgba(250, 245, 255, 0.2);
+    outline-offset: -1px;
+    /* position: absolute; */
+    -webkit-clip-path: polygon(
+      10px 0,
+      100% 0,
+      100% calc(100% - 10px),
+      calc(100% - 10px) 100%,
+      0 100%,
+      0 10px
+    );
+    clip-path: polygon(
+      10px 0,
+      100% 0,
+      100% calc(100% - 10px),
+      calc(100% - 10px) 100%,
+      0 100%,
+      0 10px
+    );
+    -webkit-box-shadow: 3px 2px 10px 1px rgba(0, 0, 0, 0.43);
+    box-shadow: 3px 2px 10px 1px rgba(0, 0, 0, 0.43);
+  }
+  .glass {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+  }
+  .grid-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    height: 100%; /* O la altura que necesites */
+    align-content: space-between;
+  }
+  .table-container {
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    overflow-y: hidden; /* Oculta el desplazamiento vertical, si es necesario */
+    -webkit-overflow-scrolling: touch; /* Para un desplazamiento más suave en dispositivos táctiles */
+  }
+
+  /* Estilo para navegadores Webkit (Chrome, Safari) */
+  .table-container::-webkit-scrollbar {
+    height: 8px; /* Altura de la barra de desplazamiento horizontal */
+  }
+
+  .table-container::-webkit-scrollbar-thumb {
+    background: rgba(
+      0,
+      0,
+      0,
+      0.2
+    ); /* Color del thumb de la barra de desplazamiento */
+    border-radius: 4px; /* Bordes redondeados para el thumb */
+  }
+
+  .table-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4); /* Color del thumb al pasar el mouse */
+  }
+
+  /* Para Firefox */
+  .table-container {
+    scrollbar-width: thin; /* Grosor de la barra de desplazamiento */
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* Color del thumb y del fondo */
+  }
+
+  /* Para Internet Explorer y Edge */
+  .table-container {
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* Barra de desplazamiento auto-ocultable */
+  }
 }
+<<<<<<< HEAD
 body {
 	padding: 0;
   margin: 0;
@@ -60,3 +359,5 @@ main {
 	grid-column: 3/9;
 	align-self: center;
 }
+=======
+>>>>>>> refactor-framework

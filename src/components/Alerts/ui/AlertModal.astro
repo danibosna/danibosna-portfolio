@@ -1,0 +1,21 @@
+---
+import { Button } from "@/components/ui/button";
+import alertIcon from "@/assets/images/chart.jpg";
+---
+
+<div class="px-4 space-y-4 flex flex-col items-center">
+  <div class="space-y-8 mb-16 text-center">
+    <div class="flex items-center justify-center">
+      <img class="" src={alertIcon.src} alt="" />
+    </div>
+    <h3 class="text-lg text-tertiary font-semibold">
+      {"¡Última oportunidad!"}
+    </h3>
+    <p class="w-1/2 mx-auto text-lg text-tertiary font-medium">
+      Al continuar aceptas que ya no podrás retroceder el estado del cliente.
+    </p>
+  </div>
+  <Button className="text-white" size={"sm"} variant={"default"}>
+    Visto
+  </Button>
+</div>
