@@ -124,7 +124,7 @@
     /* padding-bottom: 0.5rem; */
   }
 
-  #body {
+  body {
     height: 100vh;
     background-size: 100% 100%;
     background-position:
@@ -154,6 +154,13 @@
       radial-gradient(35% 56% at 91% 74%, #002bcdf5 9%, #073aff00 100%),
       radial-gradient(74% 86% at 67% 38%, #000000f5 24%, #073aff00 100%),
       linear-gradient(125deg, #4eb5ffff 1%, #0600d1ff 100%);
+  }
+
+  #body {
+    background-image: url("../assets/images/blockchain-optimize.webp");
+    background-position: center center;
+    background-size: 80%;
+    background-repeat: no-repeat;
   }
 
   #app {
@@ -221,10 +228,12 @@
       height: 100%;
       position: fixed;
       z-index: 9999;
+      transition: all 0.7s ease-in-out;
     }
     #nav.contracted {
-      height: 94px;
-      width: 70px;
+      height: 75px;
+      width: 75px;
+      transition: all 0.7s ease-in-out;
     }
     #nav.contracted .nav-item {
       display: none; /* Ocultar el texto cuando el menú esté contraído */

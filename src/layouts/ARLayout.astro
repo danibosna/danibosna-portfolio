@@ -1,0 +1,54 @@
+---
+import "@fontsource-variable/montserrat";
+import "@/styles/globals.css";
+import NavMenu from "@/components/NavMenu/ui/NavMenu";
+import Header from "@/components/Header/ui/Header";
+import Modal from "@/components/Modal/ui/Modal.astro";
+import getPageMetadata from "./constants/page-metadata.ts";
+import { ViewTransitions } from "astro:transitions";
+
+const url = new URL(Astro.request.url);
+const path = url.pathname;
+const metadata = getPageMetadata(path);
+
+const { action } = Astro.params;
+
+const { title, description, sectionTitle, withButton } = metadata;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/danibosna-logo-white.webp" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script src="node_modules/lite-youtube-embed/src/lite-yt-embed.js"></script>
+    <link
+      rel="stylesheet"
+      href="node_modules/lite-youtube-embed/src/lite-yt-embed.css"
+    />
+    <ViewTransitions fallback="animate" />
+  </head>
+  <body>
+    <div id="body" class="h-screen w-full lg:p-10 2xl:px-14 overflow-hidden">
+      <div id="app" class="clip-container">
+        <NavMenu />
+        <main class="[grid-area:main] w-full px-3 pt-5 pb-12 md:px-4 md:py-7">
+          <Header
+            client:load
+            sectionTitle={sectionTitle}
+            buttonData={withButton}
+            query={action}
+          />
+          <div class="pt-6 w-full h-[80vh] overflow-y-scroll">
+            <slot />
+          </div>
+        </main>
+      </div>
+    </div>
+    <Modal />
+  </body>
+</html>

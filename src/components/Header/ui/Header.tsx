@@ -44,24 +44,26 @@ const Header: React.FC<MainHeaderProps> = ({
   };
 
   return (
-    <div className="flex items-center gap-1 justify-end md:gap-6 sm:justify-between px-4">
-      <h1 className="w-3/4 sm:w-1/2 sm:text-start text-center text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-400">
+    <div className="w-full grid grid-cols-[25%_1fr_25%]">
+      <h1 className="w-full text-center col-start-2 text-2xl font-semibold text-slate-400">
         {sectionTitle}
       </h1>
-      {buttonData?.showButton && (
-        <Button
-          type="button"
-          variant={buttonData.variant}
-          size={buttonData.size}
-          onClick={handleClick}
-        >
-          {buttonData.size !== "icon" ? (
-            <span>{buttonData.buttonTitle}</span>
-          ) : (
-            <img src={buttonData?.buttonTitle} alt="" />
-          )}
-        </Button>
-      )}
+      <div className="w-full col-start-3 text-center">
+        {buttonData?.showButton && (
+          <Button
+            type="button"
+            variant={buttonData.variant}
+            size={buttonData.size}
+            onClick={handleClick}
+          >
+            {buttonData.size !== "icon" ? (
+              <span>{buttonData.buttonTitle}</span>
+            ) : (
+              <img src={buttonData?.buttonTitle} alt="" />
+            )}
+          </Button>
+        )}
+      </div>
     </div>
   );
 };

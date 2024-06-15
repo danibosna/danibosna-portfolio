@@ -11,7 +11,7 @@ interface AccordionProps {
   item: NavItem;
 }
 
-export const ItemAccordion: React.FC<AccordionProps> = ({ item }) => {
+export const NavItemAccordion: React.FC<AccordionProps> = ({ item }) => {
   function classNames(...classes: string[]): string {
     return classes.filter(Boolean).join(" ");
   }
