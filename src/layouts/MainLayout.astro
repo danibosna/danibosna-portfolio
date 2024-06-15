@@ -1,7 +1,7 @@
 ---
 import "@fontsource-variable/montserrat";
 import "@/styles/globals.css";
-import NavMenu from "@/components/NavMenu/ui/NavMenu.astro";
+import NavMenu from "@/components/NavMenu/ui/NavMenu";
 import Header from "@/components/Header/ui/Header";
 import Modal from "@/components/Modal/ui/Modal.astro";
 import getPageMetadata from "./constants/page-metadata.ts";
@@ -35,7 +35,7 @@ const { title, description, sectionTitle, withButton } = metadata;
   <body>
     <div id="body" class="h-screen w-full lg:p-10 2xl:px-14 overflow-hidden">
       <div id="app" class="clip-container">
-        <NavMenu />
+        <NavMenu client:only="react" />
         <main class="[grid-area:main] w-full px-3 pt-5 pb-12 md:px-4 md:py-7">
           <Header
             client:load
