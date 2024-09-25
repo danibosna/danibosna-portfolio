@@ -1,0 +1,110 @@
+---
+import linkIcon from "@/assets/icons/new-tab.svg";
+
+interface Props {
+  logo: string;
+  title: string;
+  extract: string;
+  date: string;
+  href: string;
+}
+
+const { logo, title, extract, date, href } = Astro.props;
+---
+
+<div class="portfolio-container col-span-12 sm:col-span-6 lg:col-span-12">
+  <div class="project-card glass clip-container">
+    <img src={logo} alt={`logo-${title}`} class="project-image" />
+    <div class="project-info">
+      <h2 class="project-title">{title}</h2>
+      <p class="project-description">{extract}</p>
+      <div class="project-tech">
+        <span class="tech-tag">HTML</span>
+        <span class="tech-tag">CSS</span>
+        <span class="tech-tag">JavaScript</span>
+      </div>
+      <p class="w-full px-8">
+        <a class="w-full flex justify-end" href={href}>
+          <img src={linkIcon.src} alt="" />
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+<style>
+  .portfolio-container {
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .project-card {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+  .project-image {
+    width: 40%;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+  }
+  .project-info {
+    padding: 20px;
+    width: 60%;
+  }
+  .project-title {
+    font-size: 1.5em;
+    margin-top: 0;
+    color: #fff;
+    font-weight: bolder;
+  }
+  .project-description {
+    font-size: 0.9em;
+    color: #eee;
+  }
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .tech-tag {
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+  }
+  @media (max-width: 992px) {
+    .project-card {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+      width: 100%;
+    }
+    .project-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .project-info {
+      width: 100%;
+    }
+    .project-title {
+      font-size: 1.2em;
+    }
+    .project-description {
+      font-size: 0.8em;
+    }
+    .project-tech {
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 10px;
+    }
+    .tech-tag {
+      padding: 5px 10px;
+      font-size: 0.7em;
+    }
+  }
+</style>

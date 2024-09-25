@@ -1,31 +1,7 @@
 ---
 import Section from "@/components/Section/ui/Section.astro";
-import { ArticleCard } from "@/components/Card/ui/ArticleCard";
-import thumbnailImg from "@/assets/images/BTC.jpg";
-
-const mockArticles = [
-  {
-    slug: "/blog/test-blog",
-    id: "1",
-    title: "test de titulo",
-    thumbnail: thumbnailImg.src,
-  },
-];
 ---
 
 <Section>
-  <div class={`grid w-full grid-flow-row-dense grid-cols-12 gap-4`}>
-    {
-      mockArticles?.map((article, index) => (
-        <ArticleCard
-          client:only="react"
-          slug={article.slug}
-          index={index}
-          id={article.id}
-          title={article.title}
-          thumbnail={article.thumbnail}
-        />
-      ))
-    }
-  </div>
+  <slot />
 </Section>

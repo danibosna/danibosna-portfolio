@@ -25,11 +25,11 @@ const { sectionTitle, withButton } = metadata;
     <link rel="icon" type="image/svg+xml" href="/danibosna-logo-white.webp" />
     <meta name="generator" content={Astro.generator} />
     <title>{frontmatter.title}</title>
-    <script src="node_modules/lite-youtube-embed/src/lite-yt-embed.js"></script>
-    <link
-      rel="stylesheet"
-      href="node_modules/lite-youtube-embed/src/lite-yt-embed.css"
-    />
+    <!-- <script src="node_modules/lite-youtube-embed/src/lite-yt-embed.js"></script> -->
+    <!-- <link -->
+    <!--   rel="stylesheet" -->
+    <!--   href="node_modules/lite-youtube-embed/src/lite-yt-embed.css" -->
+    <!-- /> -->
     <ViewTransitions fallback="animate" />
   </head>
   <body>
@@ -43,7 +43,9 @@ const { sectionTitle, withButton } = metadata;
             buttonData={withButton}
             query={action}
           />
-          <div class="pt-6 w-full h-[80vh] overflow-y-scroll text-white">
+          <div
+            class="prose prose-invert pt-6 w-full h-[80vh] overflow-y-scroll text-white"
+          >
             <slot />
           </div>
         </main>

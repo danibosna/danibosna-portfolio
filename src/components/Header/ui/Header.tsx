@@ -44,7 +44,7 @@ const Header: React.FC<MainHeaderProps> = ({
   };
 
   return (
-    <div className="w-full grid grid-cols-[25%_1fr_25%]">
+    <div className="w-full min-h-10 grid grid-cols-[25%_1fr_25%]">
       <h1 className="w-full text-center col-start-2 text-2xl font-semibold text-slate-400">
         {sectionTitle}
       </h1>

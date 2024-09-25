@@ -1,9 +1,8 @@
 ---
-layout: ../layouts/AboutMeLayout.astro
+layout: ../layouts/BlogLayout.astro
 title: "Solidity Engineer & Smart Contract Auditor"
 author: "DaniBosna"
 description: "About Me"
-slug: /danibosna
 ---
 
 Driven by an unyielding passion for the tech industry, I am dedicated to creating solutions that address the needs of underdeveloped systems. As a **Solidity Engineer & Smart Contract Auditor**, I focus on developing and securing blockchain solutions to ensure the highest standards of quality and reliability.
