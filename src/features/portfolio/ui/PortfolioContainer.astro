@@ -1,11 +1,7 @@
 ---
-import Projects from "./Projects.astro";
+import Section from "@/components/Section/ui/Section.astro";
 ---
 
-<section>
-  <h2>Portfolio.</h2>
-  <ul>
-    <Projects />
-  </ul>
-</section>;
-
+<Section>
+  <slot />
+</Section>

@@ -156,6 +156,10 @@
       linear-gradient(125deg, #4eb5ffff 1%, #0600d1ff 100%);
   }
 
+  main {
+    width: 100%;
+  }
+
   #body {
     background-image: url("../assets/images/blockchain-optimize.webp");
     background-position: center center;
@@ -166,8 +170,8 @@
   #app {
     height: 100%;
     display: grid;
-    grid-template-areas: "aside main";
-    grid-template-columns: min-content 1fr;
+    grid-template-areas: "aside main main";
+    grid-template-columns: min-content 1fr 1fr;
   }
 
   #nav {
@@ -200,8 +204,12 @@
       height: 100%;
       position: fixed;
       z-index: 9999;
+      transition: all 0.7s ease-in-out;
     }
     #nav.contracted {
+      height: 65px;
+      width: 65px;
+      transition: all 0.7s ease-in-out;
     }
   }
 
@@ -211,8 +219,12 @@
       height: 100%;
       position: fixed;
       z-index: 9999;
+      transition: all 0.7s ease-in-out;
     }
     #nav.contracted {
+      height: 65px;
+      width: 65px;
+      transition: all 0.7s ease-in-out;
     }
   }
 
@@ -221,9 +233,9 @@
     #app {
       display: flex;
     }
-    #btn-toggle {
-      display: none;
-    }
+    /* #btn-toggle { */
+    /*   display: none; */
+    /* } */
     #nav {
       height: 100%;
       position: fixed;
@@ -231,14 +243,14 @@
       transition: all 0.7s ease-in-out;
     }
     #nav.contracted {
-      height: 75px;
-      width: 75px;
+      height: 65px;
+      width: 65px;
       transition: all 0.7s ease-in-out;
     }
-    #nav.contracted .nav-item {
-      display: none; /* Ocultar el texto cuando el menú esté contraído */
-      transition: display 0.1s ease-in-out;
-    }
+    /* #nav.contracted .nav-item { */
+    /*   display: none; /* Ocultar el texto cuando el menú esté contraído */
+    /*   transition: display 0.1s ease-in-out; */
+    /* } */
   }
   #yt-iframe {
     width: 800px;
@@ -273,15 +285,15 @@
     box-shadow: 3px 2px 10px 1px rgba(0, 0, 0, 0.43);
   }
   .glass {
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(22, 47, 93, 0.75);
+    backdrop-filter: blur(22px) saturate(180%);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
   }
   .grid-container {
     display: grid;
-    grid-template-rows: auto auto;
+    grid-auto-flow: row dense;
     height: 100%; /* O la altura que necesites */
-    align-content: space-between;
+    width: 100%;
   }
   .table-container {
     overflow-x: auto; /* Permite el desplazamiento horizontal */

@@ -1,8 +1,27 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
 import BlogContainer from "@/features/blog/ui/BlogContainer.astro";
+import { getCollection } from "astro:content";
+import ArticleCard from "@/components/Card/ui/ArticleCard.astro";
+
+const vulnerabilities = await getCollection("vulnerabilities");
+console.log("VUL", vulnerabilities);
 ---
 
 <MainLayout>
-  <BlogContainer />
+  <BlogContainer>
+    {
+      vulnerabilities?.map((article, index) => {
+        const { slug, data } = article;
+        return (
+          <ArticleCard
+            index={index}
+            slug={slug}
+            title={data.title}
+            thumbnail={data.img}
+          />
+        );
+      })
+    }
+  </BlogContainer>
 </MainLayout>

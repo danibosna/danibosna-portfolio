@@ -36,14 +36,14 @@ const { title, description, sectionTitle, withButton } = metadata;
     <div id="body" class="h-screen w-full lg:p-10 2xl:px-14 overflow-hidden">
       <div id="app" class="clip-container">
         <NavMenu client:only="react" />
-        <main class="[grid-area:main] w-full px-3 pt-5 pb-12 md:px-4 md:py-7">
+        <main class="[grid-area:main] px-3 pt-6 pb-12">
           <Header
             client:load
             sectionTitle={sectionTitle}
             buttonData={withButton}
             query={action}
           />
-          <div class="pt-6 w-full h-[80vh] overflow-y-scroll">
+          <div class="w-full h-[85vh] overflow-y-scroll">
             <slot />
           </div>
         </main>
