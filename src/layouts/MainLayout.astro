@@ -33,17 +33,17 @@ const { title, description, sectionTitle, withButton } = metadata;
     <ViewTransitions fallback="animate" />
   </head>
   <body>
-    <div id="body" class="h-screen w-full lg:p-10 2xl:px-14 overflow-hidden">
-      <div id="app" class="clip-container">
+    <div id="body" class="h-screen w-full p-1 lg:p-3 overflow-hidden">
+      <div id="app" class="">
         <NavMenu client:only="react" />
-        <main class="[grid-area:main] px-3 pt-6 pb-12">
+        <main class="[grid-area:main] px-3 md:px-4">
           <Header
             client:load
             sectionTitle={sectionTitle}
             buttonData={withButton}
             query={action}
           />
-          <div class="w-full h-[85vh] overflow-y-scroll">
+          <div class="w-full h-[90vh] py-3 overflow-y-scroll">
             <slot />
           </div>
         </main>

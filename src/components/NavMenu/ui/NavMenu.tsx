@@ -12,12 +12,12 @@ const NavComponent: React.FC = () => {
     <nav
       id="nav"
       className={cn(
-        "lg:[grid-area:aside] flex justify-center overflow-y-auto overflow-x-hidden clip-container",
+        "lg:[grid-area:aside] flex justify-center overflow-y-auto overflow-x-hidden clip-container glass",
         showMenu && "contracted",
       )}
     >
-      <div className="w-full h-full flex flex-col justify-start items-centeri space-y-5">
-        <div className="flex flex-col justify-start text-xs font-bold pl-2 pt-2 md:text-lg">
+      <div className="w-full h-full flex flex-col justify-start space-y-5">
+        <div className="flex flex-col justify-start text-xs font-bold pl-[0.6rem] pt-[0.6rem] md:text-lg">
           <button className="text-center" onClick={() => toggleShowMenu()}>
             <img src={logoIcon.src} height={45} width={45} alt="Logo" />
           </button>

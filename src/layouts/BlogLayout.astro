@@ -33,10 +33,10 @@ const { sectionTitle, withButton } = metadata;
     <ViewTransitions fallback="animate" />
   </head>
   <body>
-    <div id="body" class="h-screen w-full lg:p-10 2xl:px-14 overflow-hidden">
-      <div id="app" class="clip-container">
+    <div id="body" class="h-screen w-full p-1 lg:p-3 overflow-hidden">
+      <div id="app" class="">
         <NavMenu client:only="react" />
-        <main class="[grid-area:main] w-full px-3 pt-5 pb-12 md:px-4 md:py-7">
+        <main class="[grid-area:main] w-full px-3 md:px-4">
           <Header
             client:load
             sectionTitle={sectionTitle}
@@ -44,7 +44,7 @@ const { sectionTitle, withButton } = metadata;
             query={action}
           />
           <div
-            class="prose prose-invert pt-6 w-full h-[80vh] overflow-y-scroll text-white"
+            class="prose prose-invert py-3 w-full h-[90vh] overflow-y-scroll"
           >
             <slot />
           </div>

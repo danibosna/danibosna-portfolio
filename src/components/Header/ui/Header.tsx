@@ -44,11 +44,11 @@ const Header: React.FC<MainHeaderProps> = ({
   };
 
   return (
-    <div className="w-full min-h-10 grid grid-cols-[25%_1fr_25%]">
-      <h1 className="w-full text-center col-start-2 text-2xl font-semibold text-slate-400">
+    <div className="w-full min-h-10 pb-6 grid grid-cols-[25%_1fr_25%] items-end">
+      <h1 className="w-full text-center lg:text-left col-start-2 lg:col-start-1 text-2xl font-semibold text-slate-400">
         {sectionTitle}
       </h1>
-      <div className="w-full col-start-3 text-center">
+      <div className="w-full col-start-3 text-right">
         {buttonData?.showButton && (
           <Button
             type="button"
